@@ -14,7 +14,7 @@ const Index = () => {
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <div className="font-bold text-forest-deep text-lg">Connected Decompression Walks™</div>
+          <div className="font-bold text-forest-deep text-lg">Guided Decompression Walks™</div>
           <Button 
             variant="hero" 
             size="sm"
@@ -35,10 +35,10 @@ const Index = () => {
         />
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Connected Decompression Walks™
+            Guided Decompression Walks™
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
-            A science-based, trainer-led walking experience. Give your dog freedom with guidance while you learn the skills to create connection, regulation, and repeatable calm.
+            A relationship-based, trainer-led walking experience. Give your dog freedom with guidance while you learn the skills to create connection, regulation, and repeatable calm.
           </p>
           
           <div className="flex flex-wrap justify-center gap-4 mb-8 text-sm md:text-base">
@@ -79,10 +79,10 @@ const Index = () => {
       <section className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-forest-deep">
-            Beyond Obedience: The Science of Connection
+            Rethinking Relationships
           </h2>
           <p className="text-lg leading-relaxed text-muted-foreground">
-            Connected Decompression Walks prioritize emotional well-being and natural behaviors over obedience drills. Based in affective neuroscience, this practice draws from Jaak Panksepp's research on mammalian emotional systems and modern co-regulation principles. Dogs decompress by downshifting their nervous system, exploring with choice, and engaging in restorative behaviors. Handlers learn to become calm anchors, guiding with awareness instead of control.
+            Guided Decompression Walks prioritize emotional well-being and natural behaviors over obedience drills. Based in affective neuroscience, this practice draws from Jaak Panksepp's research on mammalian emotional systems and modern co-regulation principles. Dogs decompress by downshifting their nervous system, exploring with choice, and engaging in restorative behaviors. Handlers learn to become calm anchors, guiding with awareness instead of control.
           </p>
         </div>
       </section>
