@@ -410,39 +410,39 @@ const Index = () => {
       {/* Testimonials */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-forest-deep">
-            What Handlers Are Saying
-          </h2>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="shadow-medium">
-              <CardContent className="pt-6">
-                <p className="text-muted-foreground mb-4 italic">
-                  "My reactive dog finally exhaled. So did I."
-                </p>
-                <p className="font-medium text-forest-deep">— J.S.</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="shadow-medium">
-              <CardContent className="pt-6">
-                <p className="text-muted-foreground mb-4 italic">
-                  "The long-line skills changed our daily walks."
-                </p>
-                <p className="font-medium text-forest-deep">— A.M.</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="shadow-medium">
-              <CardContent className="pt-6">
-                <p className="text-muted-foreground mb-4 italic">
-                  "Clear, calm, effective. Progress in one session."
-                </p>
-                <p className="font-medium text-forest-deep">— K.R.</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
+         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-forest-deep">
+  What Handlers Are Saying
+</h2>
+
+<div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+  <Card className="shadow-medium">
+    <CardContent className="pt-6">
+      <p className="text-muted-foreground mb-4 italic">
+        "After just two walks, my dog started checking in with me instead of pulling ahead constantly. I couldn't believe such a small change made such a big difference."
+      </p>
+      <p className="font-medium text-forest-deep">— Jessica, Golden Retriever owner</p>
+    </CardContent>
+  </Card>
+  
+  <Card className="shadow-medium">
+    <CardContent className="pt-6">
+      <p className="text-muted-foreground mb-4 italic">
+        "After one session I finally understood how just the way I hold the leash makes a huge difference. I had no idea I was creating half the tension myself."
+      </p>
+      <p className="font-medium text-forest-deep">— Mike, German Shepherd mix owner</p>
+    </CardContent>
+  </Card>
+  
+  <Card className="shadow-medium">
+    <CardContent className="pt-6">
+      <p className="text-muted-foreground mb-4 italic">
+        "I was so worried my dog would drag me everywhere, but with just a bit of time spent on anchoring techniques, our walks became actually enjoyable again."
+      </p>
+      <p className="font-medium text-forest-deep">— Sarah, Border Collie owner</p>
+    </CardContent>
+  </Card>
+</div>
+     </div>                  
       </section>
 
       {/* Final CTA */}
