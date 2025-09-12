@@ -468,7 +468,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-12 bg-forest-deep text-white">
         <div className="container mx-auto px-4 text-center">
-          <h3 className="text-xl font-semibold mb-4">Connected Decompression Walks™</h3>
+          <h3 className="text-xl font-semibold mb-4">Guided Decompression Walks™</h3>
           <p className="text-forest-light mb-6">
             Hosted by Pet Intel & Emotional Well-Being and Street Wise Canine
           </p>
