@@ -53,6 +53,20 @@ export default {
           medium: "hsl(var(--forest-medium))",
           light: "hsl(var(--forest-light))",
         },
+        sunshine: {
+          DEFAULT: "hsl(var(--sunshine))",
+          light: "hsl(var(--sunshine-light))",
+          dark: "hsl(var(--sunshine-dark))",
+        },
+        tangerine: {
+          DEFAULT: "hsl(var(--tangerine))",
+          light: "hsl(var(--tangerine-light))",
+        },
+        emerald: {
+          DEFAULT: "hsl(var(--emerald))",
+          light: "hsl(var(--emerald-light))",
+          dark: "hsl(var(--emerald-dark))",
+        },
         earth: {
           warm: "hsl(var(--earth-warm))",
           neutral: "hsl(var(--earth-neutral))",
@@ -75,6 +89,8 @@ export default {
         'gradient-hero': 'var(--gradient-hero)',
         'gradient-subtle': 'var(--gradient-subtle)',
         'gradient-nature': 'var(--gradient-nature)',
+        'gradient-warm': 'var(--gradient-warm)',
+        'gradient-emerald': 'var(--gradient-emerald)',
       },
       boxShadow: {
         'soft': 'var(--shadow-soft)',
