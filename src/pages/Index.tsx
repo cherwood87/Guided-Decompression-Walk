@@ -35,10 +35,10 @@ const Index = () => {
         />
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Guided Decompression Walks™
+            Not your typical walk.<br />Not miles. Moments.
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
-            A relationship-based, trainer-led walking experience. Give your dog freedom with guidance while you learn the skills to create connection, regulation, and repeatable calm.
+            Guided Decompression Walks™ give your dog the freedom to explore while you learn the skills to enjoy calmer, more connected walks together.
           </p>
           
           <div className="flex flex-wrap justify-center gap-4 mb-8 text-sm md:text-base">
@@ -47,12 +47,12 @@ const Index = () => {
               Long-line freedom
             </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
-              <Brain className="w-5 h-5" />
-              Co-regulation skills
+              <Users className="w-5 h-5" />
+              Trainer-led support
             </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
               <Heart className="w-5 h-5" />
-              Science-backed stress relief
+              Stress relief for both ends of the leash
             </div>
           </div>
 
@@ -75,15 +75,38 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Introduction */}
+      {/* What It Feels Like */}
       <section className="py-20 bg-gradient-subtle">
-        <div className="container mx-auto px-4 max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-forest-deep">
-            Rethinking Relationships
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-forest-deep">
+            What It Feels Like
           </h2>
-          <p className="text-lg leading-relaxed text-muted-foreground">
-            Guided Decompression Walks prioritize emotional well-being and natural behaviors over obedience drills. Based in affective neuroscience, this practice draws from Jaak Panksepp's research on mammalian emotional systems and modern co-regulation principles. Dogs decompress by downshifting their nervous system, exploring with choice, and engaging in restorative behaviors. Handlers learn to become calm anchors, guiding with awareness instead of control.
-          </p>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="text-center">
+              <h3 className="text-xl font-semibold mb-4 text-forest-deep">Sound Familiar?</h3>
+              <div className="space-y-3 text-muted-foreground">
+                <p>• Does your dog bark and lunge at everything on leash?</p>
+                <p>• Do you come home from walks more stressed than when you left?</p>
+                <p>• Are you avoiding busy sidewalks because walks feel overwhelming?</p>
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <h3 className="text-xl font-semibold mb-4 text-forest-deep">Here's What Changes</h3>
+              <div className="space-y-3 text-muted-foreground">
+                <p>• Your dog learns to explore calmly instead of frantically</p>
+                <p>• You both leave feeling more connected and relaxed</p>
+                <p>• Daily walks become something you actually look forward to</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="text-center max-w-3xl mx-auto">
+            <p className="text-lg leading-relaxed text-muted-foreground">
+              These walks flip the script. We show you how to slow down, let your dog sniff, choose, and settle—and how to walk together without the constant tension.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -105,7 +128,7 @@ const Index = () => {
               <CardContent className="space-y-4">
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-0" />
-                  <span>Explore safely on a 12–15 ft line</span>
+                  <span>Explore safely on a 12–30 ft line</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-0" />
@@ -113,11 +136,11 @@ const Index = () => {
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-0" />
-                  <span>Express natural behaviors (sniff, choose, pause)</span>
+                  <span>Sniff, pause, and make natural choices</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-0" />
-                  <span>Cycle naturally through arousal → regulation</span>
+                  <span>Move from arousal → regulation without being rushed</span>
                 </div>
               </CardContent>
             </Card>
@@ -132,7 +155,7 @@ const Index = () => {
               <CardContent className="space-y-4">
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-0" />
-                  <span>Learn to read emotional signals in real time</span>
+                  <span>Read your dog's signals in real time</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-0" />
@@ -140,11 +163,11 @@ const Index = () => {
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-0" />
-                  <span>Use breath, pace, and posture to co-regulate</span>
+                  <span>Use breath and body to co-regulate</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-0" />
-                  <span>Build confidence in mindful, repeatable skills</span>
+                  <span>Leave with repeatable skills for calmer daily walks</span>
                 </div>
               </CardContent>
             </Card>
@@ -152,67 +175,14 @@ const Index = () => {
         </div>
       </section>
 
-      {/* The Science of Decompression */}
-      <section className="py-20 bg-forest-light/30">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-forest-deep">
-            The Science of Decompression
-          </h2>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center shadow-soft">
-              <CardHeader>
-                <div className="w-16 h-16 bg-forest-medium rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Brain className="w-8 h-8 text-white" />
-                </div>
-                <CardTitle className="text-forest-deep">Why It Matters</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Chronic stress in dogs can come from restricted movement, overstimulation, or lack of choice. Decompression allows cortisol levels to lower, activates the parasympathetic nervous system, and restores balance.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center shadow-soft">
-              <CardHeader>
-                <div className="w-16 h-16 bg-forest-medium rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-white" />
-                </div>
-                <CardTitle className="text-forest-deep">The SEEKING System</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Following their nose activates the dopamine-driven SEEKING system (Panksepp), building confidence and reducing anxiety.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center shadow-soft">
-              <CardHeader>
-                <div className="w-16 h-16 bg-forest-medium rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Heart className="w-8 h-8 text-white" />
-                </div>
-                <CardTitle className="text-forest-deep">Natural Cycles</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Dogs move through predictable states — Arousal → Seeking → Observing → Sniffing → Grounding → Resting. On decompression walks, we honor these rhythms instead of interrupting them.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Session Flow */}
+      {/* The Experience */}
       <section id="session-flow" className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-forest-deep">
-            What to Expect
+            The Experience
           </h2>
-          <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
-            This is not obedience. It's about connection, regulation, and well-being.
+          <p className="text-center text-muted-foreground mb-16 max-w-3xl mx-auto text-lg">
+            Each walk is a guided session on our 100-acre private property. Dogs explore safely on a long line while trainers coach you on handling, timing, and reading your dog's signals. You'll leave with a calmer dog and skills you can use on every walk.
           </p>
           
           <div className="max-w-4xl mx-auto">
@@ -258,26 +228,83 @@ const Index = () => {
             Perfect For
           </h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {[
-              "Reactive / overstimulated dogs",
-              "Rescue or newly adopted dogs", 
-              "Foster dogs building resilience for adoption",
-              "Young dogs learning safe exploration",
-              "High-drive dogs needing mental structure",
-              "Anxious or sensitive dogs",
-              "Senior dogs benefiting from slower sniff-based walks",
-              "Multi-handler households wanting shared skills",
-              "Guardians seeking confidence and clarity",
-              "Professionals refining long-line mechanics"
+              "If your dog barks and lunges at other dogs",
+              "If your rescue needs a safe way to build confidence",
+              "If you avoid busy sidewalks because walks feel overwhelming",
+              "If your high-energy dog never seems tired after a walk",
+              "If you want calmer, more connected outings with your dog",
+              "If your anxious dog needs gentle confidence building"
             ].map((item, index) => (
-              <Card key={index} className="text-center shadow-soft hover:shadow-medium transition-smooth">
-                <CardContent className="pt-6">
-                  <CheckCircle className="w-8 h-8 text-forest-medium mx-auto mb-3" />
-                  <p className="font-medium text-forest-deep">{item}</p>
+              <Card key={index} className="shadow-soft hover:shadow-medium transition-smooth">
+                <CardContent className="pt-6 pb-6">
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="w-6 h-6 text-forest-medium flex-shrink-0 mt-0.5" />
+                    <p className="font-medium text-forest-deep text-left">{item}</p>
+                  </div>
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why It Works */}
+      <section className="py-20 bg-forest-light/30">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-forest-deep">
+            Why It Works
+          </h2>
+          
+          <div className="text-center mb-12 max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Dogs need more than miles—they need moments to regulate. Research shows sniffing lowers stress hormones, activates the calm side of the nervous system, and builds confidence. Guided Decompression Walks™ combine this science with hands-on coaching so both ends of the leash can reset together.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="text-center shadow-soft">
+              <CardHeader>
+                <div className="w-16 h-16 bg-forest-medium rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Brain className="w-8 h-8 text-white" />
+                </div>
+                <CardTitle className="text-forest-deep">Stress Relief</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Decompression allows cortisol levels to lower, activates the parasympathetic nervous system, and restores balance.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center shadow-soft">
+              <CardHeader>
+                <div className="w-16 h-16 bg-forest-medium rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Target className="w-8 h-8 text-white" />
+                </div>
+                <CardTitle className="text-forest-deep">Confidence Building</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Following their nose activates the SEEKING system, building confidence and reducing anxiety naturally.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center shadow-soft">
+              <CardHeader>
+                <div className="w-16 h-16 bg-forest-medium rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Heart className="w-8 h-8 text-white" />
+                </div>
+                <CardTitle className="text-forest-deep">Natural Rhythms</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Dogs move through predictable states. On decompression walks, we honor these rhythms instead of interrupting them.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -289,6 +316,9 @@ const Index = () => {
             {/* Pricing */}
             <div>
               <h2 className="text-3xl font-bold mb-8 text-forest-deep">Pricing & Packages</h2>
+              <p className="text-forest-medium font-medium mb-6 text-center">
+                Spots are intentionally limited to keep groups small. Reserve now—your dog deserves this space.
+              </p>
               <div className="space-y-6">
                 <Card className="shadow-medium">
                   <CardHeader>
