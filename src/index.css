@@ -58,6 +58,30 @@ All colors MUST be HSL.
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
+    /* Fluid Typography */
+    --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+    --text-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+    --text-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+    --text-lg: clamp(1.125rem, 1rem + 0.625vw, 1.25rem);
+    --text-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+    --text-2xl: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+    --text-3xl: clamp(1.875rem, 1.5rem + 1.875vw, 2.5rem);
+    --text-4xl: clamp(2.25rem, 1.8rem + 2.25vw, 3rem);
+    --text-5xl: clamp(3rem, 2.4rem + 3vw, 4rem);
+    --text-6xl: clamp(3.75rem, 3rem + 3.75vw, 5rem);
+    --text-7xl: clamp(4.5rem, 3.6rem + 4.5vw, 6rem);
+
+    /* Responsive Spacing */
+    --space-xs: clamp(0.25rem, 0.2rem + 0.25vw, 0.375rem);
+    --space-sm: clamp(0.5rem, 0.4rem + 0.5vw, 0.75rem);
+    --space-md: clamp(1rem, 0.8rem + 1vw, 1.5rem);
+    --space-lg: clamp(1.5rem, 1.2rem + 1.5vw, 2.25rem);
+    --space-xl: clamp(2rem, 1.6rem + 2vw, 3rem);
+    --space-2xl: clamp(2.5rem, 2rem + 2.5vw, 3.75rem);
+    --space-3xl: clamp(3rem, 2.4rem + 3vw, 4.5rem);
+    --space-4xl: clamp(4rem, 3.2rem + 4vw, 6rem);
+    --space-5xl: clamp(5rem, 4rem + 5vw, 8rem);
+
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
@@ -123,5 +147,54 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-size: var(--text-base);
+    overflow-x: hidden;
+  }
+
+  /* Fluid Typography Utilities */
+  .text-fluid-xs { font-size: var(--text-xs); }
+  .text-fluid-sm { font-size: var(--text-sm); }
+  .text-fluid-base { font-size: var(--text-base); }
+  .text-fluid-lg { font-size: var(--text-lg); }
+  .text-fluid-xl { font-size: var(--text-xl); }
+  .text-fluid-2xl { font-size: var(--text-2xl); }
+  .text-fluid-3xl { font-size: var(--text-3xl); }
+  .text-fluid-4xl { font-size: var(--text-4xl); }
+  .text-fluid-5xl { font-size: var(--text-5xl); }
+  .text-fluid-6xl { font-size: var(--text-6xl); }
+  .text-fluid-7xl { font-size: var(--text-7xl); }
+
+  /* Responsive Spacing Utilities */
+  .space-fluid-xs { margin: var(--space-xs); }
+  .space-fluid-sm { margin: var(--space-sm); }
+  .space-fluid-md { margin: var(--space-md); }
+  .space-fluid-lg { margin: var(--space-lg); }
+  .space-fluid-xl { margin: var(--space-xl); }
+  .space-fluid-2xl { margin: var(--space-2xl); }
+  .space-fluid-3xl { margin: var(--space-3xl); }
+  .space-fluid-4xl { margin: var(--space-4xl); }
+  .space-fluid-5xl { margin: var(--space-5xl); }
+
+  /* Touch-friendly interactive elements */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Performance optimizations */
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Focus indicators for accessibility */
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
   }
 }

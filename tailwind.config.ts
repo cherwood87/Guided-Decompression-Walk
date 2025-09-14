@@ -7,10 +7,31 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: {
+        DEFAULT: "1rem",
+        sm: "1.5rem", 
+        md: "2rem",
+        lg: "2.5rem",
+        xl: "3rem",
+      },
       screens: {
+        sm: "640px",
+        md: "768px", 
+        lg: "1024px",
+        xl: "1280px",
         "2xl": "1400px",
       },
+    },
+    screens: {
+      xs: "475px",
+      sm: "640px", 
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+      // Tablet-specific breakpoints
+      "tablet-p": { min: "768px", max: "1023px" },  // Tablet portrait
+      "tablet-l": { min: "1024px", max: "1279px" }, // Tablet landscape
     },
     extend: {
       colors: {
@@ -70,6 +91,30 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      fontSize: {
+        'fluid-xs': 'var(--text-xs)',
+        'fluid-sm': 'var(--text-sm)', 
+        'fluid-base': 'var(--text-base)',
+        'fluid-lg': 'var(--text-lg)',
+        'fluid-xl': 'var(--text-xl)',
+        'fluid-2xl': 'var(--text-2xl)',
+        'fluid-3xl': 'var(--text-3xl)',
+        'fluid-4xl': 'var(--text-4xl)',
+        'fluid-5xl': 'var(--text-5xl)',
+        'fluid-6xl': 'var(--text-6xl)',
+        'fluid-7xl': 'var(--text-7xl)',
+      },
+      spacing: {
+        'fluid-xs': 'var(--space-xs)',
+        'fluid-sm': 'var(--space-sm)',
+        'fluid-md': 'var(--space-md)',
+        'fluid-lg': 'var(--space-lg)',
+        'fluid-xl': 'var(--space-xl)',
+        'fluid-2xl': 'var(--space-2xl)',
+        'fluid-3xl': 'var(--space-3xl)',
+        'fluid-4xl': 'var(--space-4xl)',
+        'fluid-5xl': 'var(--space-5xl)',
       },
       backgroundImage: {
         'gradient-hero': 'var(--gradient-hero)',
