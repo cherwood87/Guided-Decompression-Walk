@@ -566,4 +566,10 @@ const Index = () => {
             <span>•</span>
             <span>$35 per session</span>
           </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
 export default Index;
