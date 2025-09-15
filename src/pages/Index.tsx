@@ -263,7 +263,7 @@ const Index = () => {
       </section>
 
       {/* Property Tour */}
-      <section className="py-12 md:py-16 lg:py-20 bg-gradient-subtle">
+    <section className="py-12 md:py-16 lg:py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-forest-deep">
             See Our 100-Acre Property
@@ -273,18 +273,26 @@ const Index = () => {
           </p>
           
           <div className="max-w-4xl mx-auto">
-            <div className="relative bg-black rounded-2xl overflow-hidden shadow-strong">
-              <div className="aspect-video flex items-center justify-center">
-                <Button
-                  variant="hero"
-                  size="lg"
-                  className="flex items-center gap-3"
-                  onClick={() => window.open('https://youtu.be/fR1quLHYZRw?si=xCnHrGfbHOJiSm1q', '_blank')}
-                >
-                  <Play className="w-6 h-6" />
-                  Watch Property Tour
-                </Button>
-              </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-strong">
+              <iframe
+                className="w-full aspect-video"
+                src="https://www.youtube.com/embed/fR1quLHYZRw"
+                title="Property Tour - Guided Decompression Walks"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="mt-4">
+              <Button
+                variant="outline"
+                size="sm"
+                className="flex items-center gap-2 mx-auto"
+                onClick={() => window.open('https://youtu.be/fR1quLHYZRw?si=xCnHrGfbHOJiSm1q', '_blank')}
+              >
+                <ExternalLink className="w-4 h-4" />
+                Open in YouTube
+              </Button>
             </div>
           </div>
         </div>
