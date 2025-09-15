@@ -3,17 +3,13 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-// IMPORTANT: exact repo name (case-sensitive)
-const REPO_BASE = "/Guided-Decompression-Walk/";
+// SAFEST for GitHub Pages project sites
+// Makes built asset paths relative (./assets/...), which works in subfolders.
+const PROD_BASE = "./";
 
 export default defineConfig(({ mode }) => ({
-  // Required for GitHub Project Pages via Actions
-  base: mode === "production" ? REPO_BASE : "/",
-
+  base: mode === "production" ? PROD_BASE : "/",
   server: { host: "::", port: 8080 },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: { alias: { "@": path.resolve(__dirname, "./src") } },
-
-  // NOTE: do NOT set build.outDir here when using Actions.
-  // The workflow builds to /dist and uploads that automatically.
 }));
