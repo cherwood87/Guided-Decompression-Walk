@@ -42,55 +42,55 @@ const Index = () => {
 
       {/* Hero Section */}
 <section className="relative min-h-screen overflow-hidden pt-16">
-  <div 
-    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-    style={{ 
-      backgroundImage: `url(${heroImage})` 
-    }}
-  />
-  <div className="relative z-10 min-h-screen flex items-center">
-    <div className="container mx-auto px-4">
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
-        <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 lg:p-12 shadow-2xl">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight text-forest-deep">
-            It's not in the miles, 
-          </h1>
-          
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-light mb-6 text-forest-medium">
-            it's in the moments.
-          </h2>
-          
-          <p className="text-lg mb-8 leading-relaxed text-gray-700">
-            Guided Decompression Walks™ give your dog the freedom to explore while you learn the skills to enjoy calmer, more connected walks together.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 mb-8">
-            <Button variant="hero" size="lg" className="w-full sm:w-auto">
-              Book Your Walk
-            </Button>
-            <Button variant="outline" size="lg" className="w-full sm:w-auto">
-              Learn More
-            </Button>
-          </div>
-          
-          <div className="flex flex-wrap gap-4 text-sm">
-            <div className="flex items-center gap-2 text-forest-deep">
-              <CheckCircle className="w-4 h-4 text-forest-medium" />
-              Long-line freedom
-            </div>
-            <div className="flex items-center gap-2 text-forest-deep">
-              <Users className="w-4 h-4 text-forest-medium" />
-              Expert coaching
-            </div>
-            <div className="flex items-center gap-2 text-forest-deep">
-              <Heart className="w-4 h-4 text-forest-medium" />
-              Stress relief
-            </div>
-          </div>
+  <div className="min-h-screen flex">
+    {/* Image Side */}
+    <div 
+      className="w-full lg:w-3/5 bg-cover bg-center bg-no-repeat"
+      style={{ 
+        backgroundImage: `url(${heroImage})` 
+      }}
+    >
+      {/* Optional overlay for mobile */}
+      <div className="lg:hidden absolute inset-0 bg-black/40"></div>
+    </div>
+    
+    {/* Content Side */}
+    <div className="absolute inset-0 lg:relative lg:w-2/5 bg-white lg:bg-white flex items-center lg:shadow-2xl">
+      <div className="w-full p-8 lg:p-12 text-white lg:text-gray-900">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+          Not your typical walk.
+        </h1>
+        
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-light mb-6 text-white/90 lg:text-forest-medium">
+          Not miles. Moments.
+        </h2>
+        
+        <p className="text-lg md:text-xl mb-8 leading-relaxed text-white/90 lg:text-gray-700">
+          Guided Decompression Walks™ give your dog the freedom to explore while you learn the skills to enjoy calmer, more connected walks together.
+        </p>
+        
+        <div className="flex flex-col sm:flex-row gap-4 mb-8">
+          <Button variant="hero" size="xl" className="w-full sm:w-auto">
+            Book Your Walk
+          </Button>
+          <Button variant="hero-outline lg:variant-outline" size="xl" className="w-full sm:w-auto">
+            Learn More
+          </Button>
         </div>
         
-        <div className="hidden lg:block">
-          {/* Space for image or additional content */}
+        <div className="flex flex-wrap gap-4 text-sm">
+          <div className="flex items-center gap-2">
+            <CheckCircle className="w-4 h-4" />
+            Long-line freedom
+          </div>
+          <div className="flex items-center gap-2">
+            <Users className="w-4 h-4" />
+            Expert coaching
+          </div>
+          <div className="flex items-center gap-2">
+            <Heart className="w-4 h-4" />
+            Stress relief
+          </div>
         </div>
       </div>
     </div>
