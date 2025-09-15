@@ -15,7 +15,7 @@ const Index = () => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  return (
+ return (
     <div className="min-h-screen bg-background">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
@@ -32,9 +32,9 @@ const Index = () => {
               variant="hero" 
               size="sm"
               className="touch-target h-10 px-4 md:h-12 md:px-6"
-              onClick={() => window.open('https://petintel.ca/products/guided-decompression-walks', '_blank')}
+              onClick={() => window.open('mailto:cherwood87@gmail.com', '_blank')}
             >
-              Book Your Walk
+              Contact
             </Button>
           </div>
         </div>
