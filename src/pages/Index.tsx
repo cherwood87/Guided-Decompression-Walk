@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowDown, MapPin, Clock, DollarSign, Users, Heart, Brain, Target, ChevronDown, CheckCircle, Play, TrendingUp, ExternalLink } from 'lucide-react';
+import { ArrowDown, MapPin, Clock, DollarSign, Users, Heart, Brain, Target, ChevronDown, CheckCircle, Play, TrendingUp, ExternalLink, Facebook, Instagram } from 'lucide-react';
 import { ResponsiveImage } from '@/components/ResponsiveImage';
 import heroImage from '@/assets/IMG_5728.jpeg';
 import walkImage1 from '@/assets/IMG_0484.jpeg';
@@ -809,24 +809,76 @@ const Index = () => {
           </div>
           
           <div className="border-t border-forest-medium/30 pt-6">
-            <div className="flex flex-col md:flex-row justify-center items-center gap-4 text-sm text-forest-light">
-              <a 
-                href="https://streetsmartcanine.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-white transition-colors"
-              >
-                Street Wise Canine <ExternalLink className="w-4 h-4" />
-              </a>
-              <span className="hidden md:inline">•</span>
-              <a 
-                href="https://petintel.ca" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-white transition-colors"
-              >
-                Pet Intel <ExternalLink className="w-4 h-4" />
-              </a>
+            <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+              {/* Street Wise Canine */}
+              <div className="text-center">
+                <h3 className="text-white font-semibold mb-3">Street Wise Canine</h3>
+                <div className="space-y-2">
+                  <a 
+                    href="https://streetsmartcanine.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 text-forest-light hover:text-white transition-colors"
+                  >
+                    Website <ExternalLink className="w-4 h-4" />
+                  </a>
+                  <div className="flex justify-center gap-3">
+                    <a 
+                      href="https://www.facebook.com" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-forest-light hover:text-white transition-colors"
+                      aria-label="Street Wise Canine Facebook"
+                    >
+                      <Facebook className="w-5 h-5" />
+                    </a>
+                    <a 
+                      href="https://www.instagram.com/cherwood87/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-forest-light hover:text-white transition-colors"
+                      aria-label="Street Wise Canine Instagram"
+                    >
+                      <Instagram className="w-5 h-5" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Pet Intel */}
+              <div className="text-center">
+                <h3 className="text-white font-semibold mb-3">Pet Intel</h3>
+                <div className="space-y-2">
+                  <a 
+                    href="https://petintel.ca" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 text-forest-light hover:text-white transition-colors"
+                  >
+                    Website <ExternalLink className="w-4 h-4" />
+                  </a>
+                  <div className="flex justify-center gap-3">
+                    <a 
+                      href="https://www.facebook.com/PetIntel" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-forest-light hover:text-white transition-colors"
+                      aria-label="Pet Intel Facebook"
+                    >
+                      <Facebook className="w-5 h-5" />
+                    </a>
+                    <a 
+                      href="https://www.instagram.com/petinteldogs/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-forest-light hover:text-white transition-colors"
+                      aria-label="Pet Intel Instagram"
+                    >
+                      <Instagram className="w-5 h-5" />
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
