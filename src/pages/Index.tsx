@@ -15,7 +15,7 @@ const Index = () => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  return (
+ return (
     <div className="min-h-screen bg-background">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
@@ -41,75 +41,61 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-end lg:items-start justify-center lg:justify-end overflow-hidden pt-16">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ 
-            backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(${heroImage})` 
-          }}
-        />
-        <div className="relative z-10 w-full max-w-sm lg:max-w-2xl p-4 lg:p-8 mb-8 lg:mb-0 lg:pt-16">
-          <div className="bg-white/90 lg:bg-transparent backdrop-blur-lg lg:backdrop-blur-none rounded-2xl lg:rounded-none p-4 lg:p-0 shadow-xl lg:shadow-none lg:text-white">
-            <div className="lg:mb-4">
-              <span className="inline-block bg-forest-medium/20 lg:bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-medium text-forest-deep lg:text-white">
-                Guided Decompression Walks™
-              </span>
+     <section className="relative min-h-screen overflow-hidden pt-16">
+  <div 
+    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+    style={{ 
+      backgroundImage: `url(${heroImage})` 
+    }}
+  />
+  <div className="relative z-10 min-h-screen flex items-center">
+    <div className="container mx-auto px-4">
+      <div className="grid lg:grid-cols-12 gap-8 items-center">
+        {/* Empty space for image on left */}
+        <div className="hidden lg:block lg:col-span-6"></div>
+        
+        {/* Content on right with transparency */}
+        <div className="lg:col-span-6 bg-white/85 backdrop-blur-md rounded-2xl p-6 md:p-8 lg:p-10 shadow-xl border border-white/20">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 leading-tight text-forest-deep">
+           It’s not about the miles, 
+          </h1>
+          
+          <h2 className="text-lg md:text-xl lg:text-2xl font-light mb-6 text-forest-medium">
+            it's about the moments.
+          </h2>
+          
+          <p className="text-base md:text-lg mb-8 leading-relaxed text-gray-700">
+            Guided Decompression Walks™ give your dog the freedom to explore while you learn the skills to enjoy calmer, more connected walks together.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-3 mb-6">
+            <Button variant="hero" size="lg" className="w-full sm:w-auto">
+              Book Your Walk
+            </Button>
+            <Button variant="outline" size="lg" className="w-full sm:w-auto">
+              Learn More
+            </Button>
+          </div>
+          
+          <div className="flex flex-wrap gap-4 text-sm">
+            <div className="flex items-center gap-2 text-forest-deep">
+              <CheckCircle className="w-4 h-4 text-forest-medium" />
+              Long-line freedom
             </div>
-            
-            <h1 className="text-xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold mb-3 lg:mb-4 leading-tight text-forest-deep lg:text-white">
-              Not your typical walk.
-            </h1>
-            
-            <h2 className="text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-light mb-4 lg:mb-6 text-forest-medium lg:text-white/90">
-              Not miles. Moments.
-            </h2>
-            
-            <p className="text-sm lg:text-lg xl:text-xl mb-6 lg:mb-8 leading-relaxed text-gray-700 lg:text-white/90">
-              Give your dog the freedom to explore while you learn the skills to enjoy calmer, more connected walks together.
-            </p>
-            
-            <div className="hidden lg:flex flex-wrap gap-3 mb-8 text-sm md:text-base">
-              <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
-                <CheckCircle className="w-4 h-4" />
-                Long-line freedom
-              </div>
-              <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
-                <Users className="w-4 h-4" />
-                Expert guidance
-              </div>
-              <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
-                <Heart className="w-4 h-4" />
-                Stress relief
-              </div>
+            <div className="flex items-center gap-2 text-forest-deep">
+              <Users className="w-4 h-4 text-forest-medium" />
+              Expert coaching
             </div>
-
-            <div className="space-y-3 lg:space-y-0 lg:flex lg:flex-col lg:sm:flex-row lg:gap-4">
-              <Button 
-                variant="hero" 
-                size="sm"
-                className="w-full lg:w-full lg:sm:w-auto"
-                onClick={() => window.open('https://petintel.ca/products/guided-decompression-walks', '_blank')}
-              >
-                Book Your Walk
-              </Button>
-              <Button 
-                variant="outline" 
-                size="sm" 
-                className="w-full lg:w-full lg:sm:w-auto lg:variant-hero-outline"
-                onClick={() => scrollToSection('session-flow')}
-              >
-                Learn More <ArrowDown className="w-4 h-4 ml-2 lg:inline" />
-              </Button>
-            </div>
-
-            {/* Mobile-only feature list */}
-            <div className="flex justify-between mt-4 text-xs text-forest-medium lg:hidden">
-              <span>✓ Long-line freedom</span>
-              <span>✓ Expert coaching</span>
+            <div className="flex items-center gap-2 text-forest-deep">
+              <Heart className="w-4 h-4 text-forest-medium" />
+              Stress relief
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Success Stats */}
       <section className="py-8 md:py-12 bg-forest-deep text-white">
@@ -217,7 +203,7 @@ const Index = () => {
       <section className="py-12 md:py-16 lg:py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-12 md:mb-16 text-forest-deep">
-            Perfect For
+            For the Dogs Who Need More Than a Walk
           </h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
@@ -227,6 +213,9 @@ const Index = () => {
               "If you avoid busy sidewalks because walks feel overwhelming",
               "If your high-energy dog never seems tired after a walk",
               "If you want calmer, more connected outings with your dog",
+              "If you want to feel less frustrated and more in sync on walks",
+              "If you’re looking for a better way to connect with your dog while meeting their real needs",
+              "If your dog struggles to settle at home because walks leave them more wound up than worn out",
               "If your anxious dog needs gentle confidence building"
             ].map((item, index) => (
               <Card key={index} className="shadow-soft hover:shadow-medium transition-smooth">
@@ -807,76 +796,24 @@ const Index = () => {
           </div>
           
           <div className="border-t border-forest-medium/30 pt-6">
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {/* Street Wise Canine */}
-              <div className="text-center md:text-left">
-                <h4 className="font-semibold text-white mb-3">Street Wise Canine</h4>
-                <div className="flex justify-center md:justify-start items-center gap-4 mb-3">
-                  <a 
-                    href="https://www.streetwisecanine.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-forest-light hover:text-white transition-colors text-sm"
-                  >
-                    Website <ExternalLink className="w-4 h-4" />
-                  </a>
-                </div>
-                <div className="flex justify-center md:justify-start gap-3">
-                  <a 
-                    href="https://www.facebook.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="w-8 h-8 bg-forest-medium/30 rounded-full flex items-center justify-center hover:bg-forest-medium transition-colors"
-                    aria-label="Street Wise Canine Facebook"
-                  >
-                    <Facebook className="w-4 h-4" />
-                  </a>
-                  <a 
-                    href="https://www.instagram.com/cherwood87/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="w-8 h-8 bg-forest-medium/30 rounded-full flex items-center justify-center hover:bg-forest-medium transition-colors"
-                    aria-label="Street Wise Canine Instagram"
-                  >
-                    <Instagram className="w-4 h-4" />
-                  </a>
-                </div>
-              </div>
-
-              {/* Pet Intel */}
-              <div className="text-center md:text-right">
-                <h4 className="font-semibold text-white mb-3">Pet Intel</h4>
-                <div className="flex justify-center md:justify-end items-center gap-4 mb-3">
-                  <a 
-                    href="https://petintel.ca" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-forest-light hover:text-white transition-colors text-sm"
-                  >
-                    Website <ExternalLink className="w-4 h-4" />
-                  </a>
-                </div>
-                <div className="flex justify-center md:justify-end gap-3">
-                  <a 
-                    href="https://www.facebook.com/PetIntel" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="w-8 h-8 bg-forest-medium/30 rounded-full flex items-center justify-center hover:bg-forest-medium transition-colors"
-                    aria-label="Pet Intel Facebook"
-                  >
-                    <Facebook className="w-4 h-4" />
-                  </a>
-                  <a 
-                    href="https://www.instagram.com/petinteldogs/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="w-8 h-8 bg-forest-medium/30 rounded-full flex items-center justify-center hover:bg-forest-medium transition-colors"
-                    aria-label="Pet Intel Instagram"
-                  >
-                    <Instagram className="w-4 h-4" />
-                  </a>
-                </div>
-              </div>
+            <div className="flex flex-col md:flex-row justify-center items-center gap-4 text-sm text-forest-light">
+              <a 
+                href="https://www.streetwisecanine.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-white transition-colors"
+              >
+                Street Wise Canine <ExternalLink className="w-4 h-4" />
+              </a>
+              <span className="hidden md:inline">•</span>
+              <a 
+                href="https://petintel.ca" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-white transition-colors"
+              >
+                Pet Intel <ExternalLink className="w-4 h-4" />
+              </a>
             </div>
           </div>
         </div>
