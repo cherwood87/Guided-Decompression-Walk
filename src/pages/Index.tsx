@@ -824,7 +824,7 @@ const Index = () => {
                   </a>
                   <div className="flex justify-center gap-3">
                     <a 
-                      href="https://www.facebook.com" 
+                      href="https://www.facebook.com/streetwisecanine" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-forest-light hover:text-white transition-colors"
