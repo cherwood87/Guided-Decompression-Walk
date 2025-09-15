@@ -145,7 +145,7 @@ const Index = () => {
       <section className="py-12 md:py-16 lg:py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 md:mb-12 text-center text-forest-deep">
-            How Guided Decompression Walks™ Are Different
+            How Guided Decompression Walks Are Different
           </h2>
           
           <div className="mb-8 md:mb-12 text-center max-w-3xl mx-auto">
