@@ -41,44 +41,58 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-   <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+<section className="relative min-h-screen overflow-hidden pt-16">
   <div 
     className="absolute inset-0 bg-cover bg-center bg-no-repeat"
     style={{ 
-      backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2)), url(${heroImage})` 
+      backgroundImage: `url(${heroImage})` 
     }}
   />
-  <div className="relative z-10 container mx-auto px-4 max-w-4xl text-white text-center">
-    <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-      Not your typical walk.<br />
-      <span className="text-2xl md:text-4xl lg:text-5xl font-medium">Not miles. Moments.</span>
-    </h1>
-    <p className="text-lg md:text-xl mb-8 leading-relaxed max-w-2xl mx-auto">
-      Guided Decompression Walks™ give your dog the freedom to explore while you learn the skills to enjoy calmer, more connected walks together.
-    </p>
-    
-    <div className="flex flex-wrap justify-center gap-3 mb-8 text-sm md:text-base">
-      <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
-        <CheckCircle className="w-5 h-5" />
-        Long-line freedom
+  <div className="relative z-10 min-h-screen flex items-center">
+    <div className="container mx-auto px-4">
+      <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 lg:p-12 shadow-2xl">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight text-forest-deep">
+            Not your typical walk.
+          </h1>
+          
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-light mb-6 text-forest-medium">
+            Not miles. Moments.
+          </h2>
+          
+          <p className="text-lg mb-8 leading-relaxed text-gray-700">
+            Guided Decompression Walks™ give your dog the freedom to explore while you learn the skills to enjoy calmer, more connected walks together.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 mb-8">
+            <Button variant="hero" size="lg" className="w-full sm:w-auto">
+              Book Your Walk
+            </Button>
+            <Button variant="outline" size="lg" className="w-full sm:w-auto">
+              Learn More
+            </Button>
+          </div>
+          
+          <div className="flex flex-wrap gap-4 text-sm">
+            <div className="flex items-center gap-2 text-forest-deep">
+              <CheckCircle className="w-4 h-4 text-forest-medium" />
+              Long-line freedom
+            </div>
+            <div className="flex items-center gap-2 text-forest-deep">
+              <Users className="w-4 h-4 text-forest-medium" />
+              Expert coaching
+            </div>
+            <div className="flex items-center gap-2 text-forest-deep">
+              <Heart className="w-4 h-4 text-forest-medium" />
+              Stress relief
+            </div>
+          </div>
+        </div>
+        
+        <div className="hidden lg:block">
+          {/* Space for image or additional content */}
+        </div>
       </div>
-      <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
-        <Users className="w-5 h-5" />
-        Trainer-led support
-      </div>
-      <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
-        <Heart className="w-5 h-5" />
-        Stress relief for both
-      </div>
-    </div>
-
-    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-      <Button variant="hero" size="xl" className="w-full sm:w-auto">
-        Book Your Walk
-      </Button>
-      <Button variant="hero-outline" size="xl" className="w-full sm:w-auto">
-        See How It Works <ArrowDown className="w-5 h-5 ml-2" />
-      </Button>
     </div>
   </div>
 </section>
