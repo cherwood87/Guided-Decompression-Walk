@@ -670,8 +670,19 @@ const Index = () => {
       </section>
 
       {/* LISTEN Method */}
-      <section className="py-12 md:py-16 lg:py-20 bg-forest-light/20">
-        <div className="container mx-auto px-4 max-w-4xl text-center">
+      <section className="py-12 md:py-16 lg:py-20 relative overflow-hidden">
+        {/* Background Image with Blur */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ 
+            backgroundImage: `url(${walkImage2})`,
+            filter: 'blur(3px)',
+            transform: 'scale(1.1)'
+          }}
+        />
+        <div className="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
+        
+        <div className="relative z-10 container mx-auto px-4 max-w-4xl text-center">
           <Badge className="mb-6 bg-forest-medium text-white">Powered by the LISTEN Method</Badge>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-forest-deep">
             The LISTEN Method
@@ -689,7 +700,7 @@ const Index = () => {
               { letter: "E", word: "Engage", description: "mindfully as a calm presence" },
               { letter: "N", word: "Nurture", description: "connection through shared experiences" }
             ].map((item, index) => (
-              <Card key={index} className="text-center shadow-soft">
+              <Card key={index} className="text-center shadow-soft bg-white/90 backdrop-blur-sm">
                 <CardContent className="pt-6">
                   <div className="w-12 h-12 bg-forest-medium text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">
                     {item.letter}
@@ -792,7 +803,7 @@ const Index = () => {
           <div className="border-t border-forest-medium/30 pt-6">
             <div className="flex flex-col md:flex-row justify-center items-center gap-4 text-sm text-forest-light">
               <a 
-                href="https://streetsmartcanine.com" 
+                href="https://www.streetwisecanine.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:text-white transition-colors"
