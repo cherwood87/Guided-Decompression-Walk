@@ -3,7 +3,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { ArrowDown, MapPin, Clock, DollarSign, Users, Heart, Brain, Target, ChevronDown, CheckCircle } from 'lucide-react';
 import { ResponsiveImage } from '@/components/ResponsiveImage';
-import heroImage from '@/assets/hero-decompression-walk.jpg';
+import heroImage from '@/assets/IMG_5728.jpeg';
+import walkImage1 from '@/assets/IMG_0484.jpeg';
+import walkImage2 from '@/assets/IMG_5703.jpeg';
+import walkImage3 from '@/assets/IMG_5710.jpeg';
+import walkImage4 from '@/assets/IMG_5736.jpeg';
+import walkImage5 from '@/assets/IMG_5744.jpeg';
 
 const Index = () => {
   const scrollToSection = (id: string) => {
@@ -28,37 +33,37 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+      <section className="relative min-h-screen flex items-start justify-start overflow-hidden pt-16">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ 
-            backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url(${heroImage})` 
+            backgroundImage: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url(${heroImage})` 
           }}
         />
-        <div className="relative z-10 container mx-auto px-4 text-center text-white">
-          <h1 className="text-fluid-5xl md:text-fluid-7xl font-bold mb-6 leading-tight">
+        <div className="relative z-10 container mx-auto px-4 pt-8 md:pt-16 max-w-2xl text-white">
+          <h1 className="text-fluid-4xl md:text-fluid-6xl font-bold mb-6 leading-tight text-left">
             Not your typical walk.<br />Not miles. Moments.
           </h1>
-          <p className="text-fluid-xl md:text-fluid-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-fluid-lg md:text-fluid-xl mb-8 leading-relaxed text-left">
             Guided Decompression Walks™ give your dog the freedom to explore while you learn the skills to enjoy calmer, more connected walks together.
           </p>
           
-          <div className="flex flex-wrap justify-center gap-3 tablet-p:gap-4 mb-8 text-fluid-sm md:text-fluid-base">
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 tablet-p:px-6 tablet-p:py-3">
+          <div className="flex flex-wrap justify-start gap-3 tablet-p:gap-4 mb-8 text-fluid-sm md:text-fluid-base">
+            <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 tablet-p:px-6 tablet-p:py-3">
               <CheckCircle className="w-5 h-5 tablet-p:w-6 tablet-p:h-6" />
               Long-line freedom
             </div>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 tablet-p:px-6 tablet-p:py-3">
+            <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 tablet-p:px-6 tablet-p:py-3">
               <Users className="w-5 h-5 tablet-p:w-6 tablet-p:h-6" />
               Trainer-led support
             </div>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 tablet-p:px-6 tablet-p:py-3">
+            <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 tablet-p:px-6 tablet-p:py-3">
               <Heart className="w-5 h-5 tablet-p:w-6 tablet-p:h-6" />
               Stress relief for both ends of the leash
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center tablet-p:gap-6">
+          <div className="flex flex-col sm:flex-row gap-4 justify-start items-start tablet-p:gap-6">
             <Button 
               variant="hero" 
               size="xl"
@@ -86,13 +91,20 @@ const Index = () => {
             What It Feels Like
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-6 tablet-p:gap-8 lg:gap-12 mb-8 tablet-p:mb-12">
+          <div className="grid md:grid-cols-2 gap-6 tablet-p:gap-8 lg:gap-12 mb-8 tablet-p:mb-12 items-center">
             <div className="text-center tablet-p:text-left">
               <h3 className="text-fluid-xl font-semibold mb-4 text-forest-deep">Sound Familiar?</h3>
               <div className="space-y-3 text-muted-foreground text-fluid-base">
                 <p>• Does your dog bark and lunge at everything on leash?</p>
                 <p>• Do you come home from walks more stressed than when you left?</p>
                 <p>• Are you avoiding busy sidewalks because walks feel overwhelming?</p>
+              </div>
+              <div className="mt-6">
+                <ResponsiveImage 
+                  src={walkImage1}
+                  alt="Dog walking scenario showing common challenges"
+                  className="rounded-xl shadow-medium w-full max-w-md mx-auto tablet-p:mx-0"
+                />
               </div>
             </div>
             
@@ -102,6 +114,13 @@ const Index = () => {
                 <p>• Your dog learns to explore calmly instead of frantically</p>
                 <p>• You both leave feeling more connected and relaxed</p>
                 <p>• Daily walks become something you actually look forward to</p>
+              </div>
+              <div className="mt-6">
+                <ResponsiveImage 
+                  src={walkImage2}
+                  alt="Peaceful dog walk showing positive changes"
+                  className="rounded-xl shadow-medium w-full max-w-md mx-auto tablet-p:mx-0"
+                />
               </div>
             </div>
           </div>
@@ -442,41 +461,51 @@ const Index = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20">
+      <section className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4">
-         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-forest-deep">
-  What Handlers Are Saying
-</h2>
-
-<div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-  <Card className="shadow-medium">
-    <CardContent className="pt-6">
-      <p className="text-muted-foreground mb-4 italic">
-        "After just two walks, my dog started checking in with me instead of pulling ahead constantly. I couldn't believe such a small change made such a big difference."
-      </p>
-      <p className="font-medium text-forest-deep">— Jessica, Golden Retriever owner</p>
-    </CardContent>
-  </Card>
-  
-  <Card className="shadow-medium">
-    <CardContent className="pt-6">
-      <p className="text-muted-foreground mb-4 italic">
-        "After one session I finally understood how just the way I hold the leash makes a huge difference. I had no idea I was creating half the tension myself."
-      </p>
-      <p className="font-medium text-forest-deep">— Mike, German Shepherd mix owner</p>
-    </CardContent>
-  </Card>
-  
-  <Card className="shadow-medium">
-    <CardContent className="pt-6">
-      <p className="text-muted-foreground mb-4 italic">
-        "I was so worried my dog would drag me everywhere, but with just a bit of time spent on anchoring techniques, our walks became actually enjoyable again."
-      </p>
-      <p className="font-medium text-forest-deep">— Sarah, Border Collie owner</p>
-    </CardContent>
-  </Card>
-</div>
-     </div>                  
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-forest-deep">
+            What Handlers Are Saying
+          </h2>
+          
+          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
+            <div className="space-y-6">
+              <Card className="shadow-medium">
+                <CardContent className="pt-6">
+                  <p className="text-muted-foreground mb-4 italic">
+                    "After just two walks, my dog started checking in with me instead of pulling ahead constantly. I couldn't believe such a small change made such a big difference."
+                  </p>
+                  <p className="font-medium text-forest-deep">— Jessica, Golden Retriever owner</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="shadow-medium">
+                <CardContent className="pt-6">
+                  <p className="text-muted-foreground mb-4 italic">
+                    "After one session I finally understood how just the way I hold the leash makes a huge difference. I had no idea I was creating half the tension myself."
+                  </p>
+                  <p className="font-medium text-forest-deep">— Mike, German Shepherd mix owner</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="shadow-medium">
+                <CardContent className="pt-6">
+                  <p className="text-muted-foreground mb-4 italic">
+                    "I was so worried my dog would drag me everywhere, but with just a bit of time spent on anchoring techniques, our walks became actually enjoyable again."
+                  </p>
+                  <p className="font-medium text-forest-deep">— Sarah, Border Collie owner</p>
+                </CardContent>
+              </Card>
+            </div>
+            
+            <div className="flex justify-center">
+              <ResponsiveImage 
+                src={walkImage5}
+                alt="Happy dog and handler after a successful decompression walk"
+                className="rounded-2xl shadow-strong w-full max-w-lg"
+              />
+            </div>
+          </div>
+        </div>                  
       </section>
 
       {/* Final CTA */}
