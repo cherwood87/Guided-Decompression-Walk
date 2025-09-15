@@ -53,11 +53,11 @@ const Index = () => {
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 lg:p-12 shadow-2xl">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight text-forest-deep">
-            Not your typical walk.
+            It's not in the miles, 
           </h1>
           
           <h2 className="text-xl md:text-2xl lg:text-3xl font-light mb-6 text-forest-medium">
-            Not miles. Moments.
+            it's in the moments.
           </h2>
           
           <p className="text-lg mb-8 leading-relaxed text-gray-700">
