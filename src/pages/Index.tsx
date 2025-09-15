@@ -20,7 +20,7 @@ const Index = () => {
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <div className="font-bold text-forest-deep text-lg md:text-xl">Guided Decompression Walks™</div>
+          <div className="font-bold text-forest-deep text-lg md:text-xl">Guided Decompression Walks</div>
           <div className="flex items-center gap-4">
             <button 
               onClick={() => scrollToSection('faq')}
@@ -52,7 +52,7 @@ const Index = () => {
           <div className="bg-white/75 lg:bg-transparent backdrop-blur-lg lg:backdrop-blur-none rounded-2xl lg:rounded-none p-4 lg:p-0 shadow-xl lg:shadow-none lg:text-white">
             <div className="lg:mb-4">
               <span className="inline-block bg-forest-medium/20 lg:bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-medium text-forest-deep lg:text-white">
-                Guided Decompression Walks™
+                Guided Decompression Walks
               </span>
             </div>
             
