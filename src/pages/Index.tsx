@@ -813,7 +813,7 @@ const Index = () => {
           <div className="border-t border-forest-medium/30 pt-6">
             <div className="flex flex-col md:flex-row justify-center items-center gap-4 text-sm text-forest-light">
               <a 
-                href="https://www.streetwisecanine.com" 
+                href="https://streetsmartcanine.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:text-white transition-colors"
