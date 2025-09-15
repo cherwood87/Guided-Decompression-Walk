@@ -801,24 +801,76 @@ const Index = () => {
           </div>
           
           <div className="border-t border-forest-medium/30 pt-6">
-            <div className="flex flex-col md:flex-row justify-center items-center gap-4 text-sm text-forest-light">
-              <a 
-                href="https://www.streetwisecanine.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-white transition-colors"
-              >
-                Street Wise Canine <ExternalLink className="w-4 h-4" />
-              </a>
-              <span className="hidden md:inline">•</span>
-              <a 
-                href="https://petintel.ca" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-white transition-colors"
-              >
-                Pet Intel <ExternalLink className="w-4 h-4" />
-              </a>
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {/* Street Wise Canine */}
+              <div className="text-center md:text-left">
+                <h4 className="font-semibold text-white mb-3">Street Wise Canine</h4>
+                <div className="flex justify-center md:justify-start items-center gap-4 mb-3">
+                  <a 
+                    href="https://www.streetwisecanine.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-forest-light hover:text-white transition-colors text-sm"
+                  >
+                    Website <ExternalLink className="w-4 h-4" />
+                  </a>
+                </div>
+                <div className="flex justify-center md:justify-start gap-3">
+                  <a 
+                    href="https://www.facebook.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 bg-forest-medium/30 rounded-full flex items-center justify-center hover:bg-forest-medium transition-colors"
+                    aria-label="Street Wise Canine Facebook"
+                  >
+                    <Facebook className="w-4 h-4" />
+                  </a>
+                  <a 
+                    href="https://www.instagram.com/cherwood87/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 bg-forest-medium/30 rounded-full flex items-center justify-center hover:bg-forest-medium transition-colors"
+                    aria-label="Street Wise Canine Instagram"
+                  >
+                    <Instagram className="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Pet Intel */}
+              <div className="text-center md:text-right">
+                <h4 className="font-semibold text-white mb-3">Pet Intel</h4>
+                <div className="flex justify-center md:justify-end items-center gap-4 mb-3">
+                  <a 
+                    href="https://petintel.ca" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-forest-light hover:text-white transition-colors text-sm"
+                  >
+                    Website <ExternalLink className="w-4 h-4" />
+                  </a>
+                </div>
+                <div className="flex justify-center md:justify-end gap-3">
+                  <a 
+                    href="https://www.facebook.com/PetIntel" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 bg-forest-medium/30 rounded-full flex items-center justify-center hover:bg-forest-medium transition-colors"
+                    aria-label="Pet Intel Facebook"
+                  >
+                    <Facebook className="w-4 h-4" />
+                  </a>
+                  <a 
+                    href="https://www.instagram.com/petinteldogs/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 bg-forest-medium/30 rounded-full flex items-center justify-center hover:bg-forest-medium transition-colors"
+                    aria-label="Pet Intel Instagram"
+                  >
+                    <Instagram className="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
