@@ -33,57 +33,55 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-    <section className="relative min-h-screen overflow-hidden pt-16">
-  <div className="min-h-screen flex">
-    {/* Image Side */}
-    <div 
-      className="w-full lg:w-3/5 bg-cover bg-center bg-no-repeat"
-      style={{ 
-        backgroundImage: `url(${heroImage})` 
-      }}
-    >
-      {/* Optional overlay for mobile */}
-      <div className="lg:hidden absolute inset-0 bg-black/40"></div>
-    </div>
-    
-    {/* Content Side */}
-    <div className="absolute inset-0 lg:relative lg:w-2/5 bg-white lg:bg-white flex items-center lg:shadow-2xl">
-      <div className="w-full p-8 lg:p-12 text-white lg:text-gray-900">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-          Not your typical walk.
-        </h1>
-        
-        <h2 className="text-xl md:text-2xl lg:text-3xl font-light mb-6 text-white/90 lg:text-forest-medium">
-          Not miles. Moments.
-        </h2>
-        
-        <p className="text-lg md:text-xl mb-8 leading-relaxed text-white/90 lg:text-gray-700">
-          Guided Decompression Walks™ give your dog the freedom to explore while you learn the skills to enjoy calmer, more connected walks together.
-        </p>
-        
-        <div className="flex flex-col sm:flex-row gap-4 mb-8">
-          <Button variant="hero" size="xl" className="w-full sm:w-auto">
-            Book Your Walk
-          </Button>
-          <Button variant="hero-outline lg:variant-outline" size="xl" className="w-full sm:w-auto">
-            Learn More
-          </Button>
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-16">
+  <div 
+    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+    style={{ 
+      backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(${heroImage})` 
+    }}
+  />
+  <div className="relative z-10 container mx-auto px-4 pt-8 md:pt-16">
+    <div className="max-w-2xl text-white">
+      <div className="mb-4">
+        <span className="inline-block bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-medium">
+          Guided Decompression Walks™
+        </span>
+      </div>
+      
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+        Not your typical walk.
+      </h1>
+      
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-light mb-6 text-white/90">
+        Not miles. Moments.
+      </h2>
+      
+      <p className="text-lg md:text-xl mb-8 leading-relaxed text-white/90">
+        Give your dog the freedom to explore while you learn the skills to enjoy calmer, more connected walks together.
+      </p>
+      
+      <div className="flex flex-wrap gap-3 mb-8 text-sm md:text-base">
+        <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
+          <CheckCircle className="w-4 h-4" />
+          Long-line freedom
         </div>
-        
-        <div className="flex flex-wrap gap-4 text-sm">
-          <div className="flex items-center gap-2">
-            <CheckCircle className="w-4 h-4" />
-            Long-line freedom
-          </div>
-          <div className="flex items-center gap-2">
-            <Users className="w-4 h-4" />
-            Expert coaching
-          </div>
-          <div className="flex items-center gap-2">
-            <Heart className="w-4 h-4" />
-            Stress relief
-          </div>
+        <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
+          <Users className="w-4 h-4" />
+          Expert guidance
         </div>
+        <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
+          <Heart className="w-4 h-4" />
+          Stress relief
+        </div>
+      </div>
+
+      <div className="flex flex-col sm:flex-row gap-4">
+        <Button variant="hero" size="lg" className="w-full sm:w-auto">
+          Book Your Walk
+        </Button>
+        <Button variant="hero-outline" size="lg" className="w-full sm:w-auto">
+          Learn More <ArrowDown className="w-4 h-4 ml-2" />
+        </Button>
       </div>
     </div>
   </div>
