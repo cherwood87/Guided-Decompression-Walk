@@ -57,11 +57,11 @@ const Index = () => {
             </div>
             
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-              Not your typical walk.
+              	It’s not about the miles
             </h1>
             
             <h2 className="text-xl md:text-2xl lg:text-3xl font-light mb-6 text-white/90">
-              Not miles. Moments.
+              it’s about the moments.
             </h2>
             
             <p className="text-lg md:text-xl mb-8 leading-relaxed text-white/90">
