@@ -223,6 +223,7 @@ const Index = () => {
               "If you want calmer, more connected outings with your dog",
               "If you want to feel less frustrated and more in sync on walks",
               "If you’re looking for a better way to connect with your dog while meeting their real needs",
+              "If your dog struggles to settle at home because walks leave them more wound up than worn out",
               "If your anxious dog needs gentle confidence building"
             ].map((item, index) => (
               <Card key={index} className="shadow-soft hover:shadow-medium transition-smooth">
