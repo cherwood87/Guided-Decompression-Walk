@@ -33,56 +33,61 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-start justify-start overflow-hidden pt-16">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ 
-            backgroundImage: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url(${heroImage})` 
-          }}
-        />
-        <div className="relative z-10 container mx-auto px-4 pt-8 md:pt-16 max-w-2xl text-white">
-          <h1 className="text-fluid-4xl md:text-fluid-6xl font-bold mb-6 leading-tight text-left">
-            Not your typical walk.<br />Not miles. Moments.
+     <section className="relative min-h-screen overflow-hidden pt-16">
+  <div 
+    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+    style={{ 
+      backgroundImage: `url(${heroImage})` 
+    }}
+  />
+  <div className="relative z-10 min-h-screen flex items-center">
+    <div className="container mx-auto px-4">
+      <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 lg:p-12 shadow-2xl">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight text-forest-deep">
+            Not your typical walk.
           </h1>
-          <p className="text-fluid-lg md:text-fluid-xl mb-8 leading-relaxed text-left">
+          
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-light mb-6 text-forest-medium">
+            Not miles. Moments.
+          </h2>
+          
+          <p className="text-lg mb-8 leading-relaxed text-gray-700">
             Guided Decompression Walks™ give your dog the freedom to explore while you learn the skills to enjoy calmer, more connected walks together.
           </p>
           
-          <div className="flex flex-wrap justify-start gap-3 tablet-p:gap-4 mb-8 text-fluid-sm md:text-fluid-base">
-            <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 tablet-p:px-6 tablet-p:py-3">
-              <CheckCircle className="w-5 h-5 tablet-p:w-6 tablet-p:h-6" />
-              Long-line freedom
-            </div>
-            <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 tablet-p:px-6 tablet-p:py-3">
-              <Users className="w-5 h-5 tablet-p:w-6 tablet-p:h-6" />
-              Trainer-led support
-            </div>
-            <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 tablet-p:px-6 tablet-p:py-3">
-              <Heart className="w-5 h-5 tablet-p:w-6 tablet-p:h-6" />
-              Stress relief for both ends of the leash
-            </div>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-start items-start tablet-p:gap-6">
-            <Button 
-              variant="hero" 
-              size="xl"
-              className="touch-target w-full sm:w-auto tablet-p:h-16 tablet-p:px-12 tablet-p:text-fluid-lg"
-              onClick={() => window.open('https://petintel.ca/products/guided-decompression-walks', '_blank')}
-            >
+          <div className="flex flex-col sm:flex-row gap-4 mb-8">
+            <Button variant="hero" size="lg" className="w-full sm:w-auto">
               Book Your Walk
             </Button>
-            <Button 
-              variant="hero-outline" 
-              size="xl"
-              className="touch-target w-full sm:w-auto tablet-p:h-16 tablet-p:px-12 tablet-p:text-fluid-lg"
-              onClick={() => scrollToSection('session-flow')}
-            >
-              See How It Works <ArrowDown className="w-5 h-5 ml-2 tablet-p:w-6 tablet-p:h-6" />
+            <Button variant="outline" size="lg" className="w-full sm:w-auto">
+              Learn More
             </Button>
           </div>
+          
+          <div className="flex flex-wrap gap-4 text-sm">
+            <div className="flex items-center gap-2 text-forest-deep">
+              <CheckCircle className="w-4 h-4 text-forest-medium" />
+              Long-line freedom
+            </div>
+            <div className="flex items-center gap-2 text-forest-deep">
+              <Users className="w-4 h-4 text-forest-medium" />
+              Expert coaching
+            </div>
+            <div className="flex items-center gap-2 text-forest-deep">
+              <Heart className="w-4 h-4 text-forest-medium" />
+              Stress relief
+            </div>
+          </div>
         </div>
-      </section>
+        
+        <div className="hidden lg:block">
+          {/* Space for image or additional content */}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* What It Feels Like */}
       <section className="py-12 tablet-p:py-16 lg:py-20 bg-gradient-subtle">
