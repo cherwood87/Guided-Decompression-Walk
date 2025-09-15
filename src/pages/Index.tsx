@@ -108,35 +108,29 @@ const Index = () => {
       {/* Success Stats */}
       <section className="py-8 md:py-12 bg-forest-deep text-white">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 text-center">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto">
+            <div className="flex flex-col items-center text-center">
+              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-3">
                 <TrendingUp className="w-6 h-6" />
               </div>
-              <div>
-                <div className="text-2xl font-bold">95%</div>
-                <div className="text-sm text-white/80">Dogs show improvement after 2 sessions</div>
-              </div>
+              <div className="text-2xl font-bold">95%</div>
+              <div className="text-sm text-white/80">Dogs show improvement after 2 sessions</div>
             </div>
             
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+            <div className="flex flex-col items-center text-center">
+              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-3">
                 <MapPin className="w-6 h-6" />
               </div>
-              <div>
-                <div className="text-2xl font-bold">100</div>
-                <div className="text-sm text-white/80">Acres of private property</div>
-              </div>
+              <div className="text-2xl font-bold">100</div>
+              <div className="text-sm text-white/80">Acres of private property</div>
             </div>
             
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+            <div className="flex flex-col items-center text-center">
+              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-3">
                 <Clock className="w-6 h-6" />
               </div>
-              <div>
-                <div className="text-2xl font-bold">60</div>
-                <div className="text-sm text-white/80">Minutes of guided exploration</div>
-              </div>
+              <div className="text-2xl font-bold">60</div>
+              <div className="text-sm text-white/80">Minutes of guided exploration</div>
             </div>
           </div>
         </div>
@@ -213,57 +207,37 @@ const Index = () => {
         </div>
       </section>
 
-      {/* What It Feels Like */}
+      {/* Perfect For Section - Moved Up */}
       <section className="py-12 md:py-16 lg:py-20">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 md:mb-12 text-center text-forest-deep">
-            What It Feels Like
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-12 md:mb-16 text-forest-deep">
+            Perfect For
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 mb-8 md:mb-12 items-center">
-            <div className="text-center md:text-left">
-              <h3 className="text-xl font-semibold mb-4 text-forest-deep">Sound Familiar?</h3>
-              <div className="space-y-3 text-muted-foreground">
-                <p>• Does your dog bark and lunge at everything on leash?</p>
-                <p>• Do you come home from walks more stressed than when you left?</p>
-                <p>• Are you avoiding busy sidewalks because walks feel overwhelming?</p>
-              </div>
-              <div className="mt-6">
-                <ResponsiveImage 
-                  src={walkImage1}
-                  alt="Dog walking scenario showing common challenges"
-                  className="rounded-xl shadow-medium w-full max-w-md mx-auto md:mx-0"
-                />
-              </div>
-            </div>
-            
-            <div className="text-center md:text-left">
-              <h3 className="text-xl font-semibold mb-4 text-forest-deep">Here's What Changes</h3>
-              <div className="space-y-3 text-muted-foreground">
-                <p>• Your dog learns to explore calmly instead of frantically</p>
-                <p>• You both leave feeling more connected and relaxed</p>
-                <p>• Daily walks become something you actually look forward to</p>
-              </div>
-              <div className="mt-6">
-                <ResponsiveImage 
-                  src={walkImage2}
-                  alt="Peaceful dog walk showing positive changes"
-                  className="rounded-xl shadow-medium w-full max-w-md mx-auto md:mx-0"
-                />
-              </div>
-            </div>
-          </div>
-          
-          <div className="text-center max-w-3xl mx-auto">
-            <p className="text-lg leading-relaxed text-muted-foreground">
-              These walks flip the script. We show you how to slow down, let your dog sniff, choose, and settle—and how to walk together without the constant tension.
-            </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
+            {[
+              "If your dog barks and lunges at other dogs",
+              "If your rescue needs a safe way to build confidence",
+              "If you avoid busy sidewalks because walks feel overwhelming",
+              "If your high-energy dog never seems tired after a walk",
+              "If you want calmer, more connected outings with your dog",
+              "If your anxious dog needs gentle confidence building"
+            ].map((item, index) => (
+              <Card key={index} className="shadow-soft hover:shadow-medium transition-smooth">
+                <CardContent className="pt-6 pb-6">
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="w-6 h-6 md:w-7 md:h-7 text-forest-medium flex-shrink-0 mt-0.5" />
+                    <p className="font-medium text-forest-deep text-left">{item}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Property Tour */}
-    <section className="py-12 md:py-16 lg:py-20 bg-gradient-subtle">
+      {/* Property Tour - Enhanced with Images */}
+      <section className="py-12 md:py-16 lg:py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-forest-deep">
             See Our 100-Acre Property
@@ -272,7 +246,7 @@ const Index = () => {
             Take a virtual tour of our private trails, meadows, and forest paths where your dog will safely explore and decompress.
           </p>
           
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto mb-8">
             <div className="relative rounded-2xl overflow-hidden shadow-strong">
               <iframe
                 className="w-full aspect-video"
@@ -295,70 +269,104 @@ const Index = () => {
               </Button>
             </div>
           </div>
+
+          {/* Property Images Gallery */}
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="relative">
+              <ResponsiveImage 
+                src={walkImage1}
+                alt="Dog exploring the natural trails at our property"
+                className="rounded-xl shadow-medium w-full"
+              />
+              <div className="absolute bottom-4 left-4 bg-black/60 text-white px-3 py-2 rounded-lg text-sm">
+                Natural trails for exploration
+              </div>
+            </div>
+            <div className="relative">
+              <ResponsiveImage 
+                src={walkImage2}
+                alt="Peaceful meadow areas for decompression"
+                className="rounded-xl shadow-medium w-full"
+              />
+              <div className="absolute bottom-4 left-4 bg-black/60 text-white px-3 py-2 rounded-lg text-sm">
+                Open meadows for calm exploration
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Dual Benefits */}
+      {/* Dual Benefits - Enhanced with Images */}
       <section className="py-12 md:py-16 lg:py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-12 md:mb-16 text-forest-deep">
             Benefits for Both Ends of the Leash
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 max-w-6xl mx-auto">
-            <Card className="shadow-medium hover:shadow-strong transition-smooth">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3 text-forest-deep text-xl md:text-2xl">
-                  <Heart className="w-8 h-8 md:w-10 md:h-10 text-forest-medium" />
-                  For Your Dog
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-forest-medium mt-0.5 flex-shrink-0" />
-                  <span>Explore safely on a 12–30 ft line</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-forest-medium mt-0.5 flex-shrink-0" />
-                  <span>Reduce stress and build confidence</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-forest-medium mt-0.5 flex-shrink-0" />
-                  <span>Sniff, pause, and make natural choices</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-forest-medium mt-0.5 flex-shrink-0" />
-                  <span>Move from arousal → regulation without being rushed</span>
-                </div>
-              </CardContent>
-            </Card>
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto items-center mb-12">
+            <div className="space-y-6">
+              <Card className="shadow-medium hover:shadow-strong transition-smooth">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3 text-forest-deep text-xl md:text-2xl">
+                    <Heart className="w-8 h-8 md:w-10 md:h-10 text-forest-medium" />
+                    For Your Dog
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-forest-medium mt-0.5 flex-shrink-0" />
+                    <span>Explore safely on a 12–30 ft line</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-forest-medium mt-0.5 flex-shrink-0" />
+                    <span>Reduce stress and build confidence</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-forest-medium mt-0.5 flex-shrink-0" />
+                    <span>Sniff, pause, and make natural choices</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-forest-medium mt-0.5 flex-shrink-0" />
+                    <span>Move from arousal → regulation without being rushed</span>
+                  </div>
+                </CardContent>
+              </Card>
 
-            <Card className="shadow-medium hover:shadow-strong transition-smooth">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3 text-forest-deep text-xl md:text-2xl">
-                  <Users className="w-8 h-8 md:w-10 md:h-10 text-forest-medium" />
-                  For You (the Handler)
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-forest-medium mt-0.5 flex-shrink-0" />
-                  <span>Read your dog's signals in real time</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-forest-medium mt-0.5 flex-shrink-0" />
-                  <span>Master long-line handling without pulling</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-forest-medium mt-0.5 flex-shrink-0" />
-                  <span>Use breath and body to co-regulate</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-forest-medium mt-0.5 flex-shrink-0" />
-                  <span>Leave with repeatable skills for calmer daily walks</span>
-                </div>
-              </CardContent>
-            </Card>
+              <Card className="shadow-medium hover:shadow-strong transition-smooth">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3 text-forest-deep text-xl md:text-2xl">
+                    <Users className="w-8 h-8 md:w-10 md:h-10 text-forest-medium" />
+                    For You (the Handler)
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-forest-medium mt-0.5 flex-shrink-0" />
+                    <span>Read your dog's signals in real time</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-forest-medium mt-0.5 flex-shrink-0" />
+                    <span>Master long-line handling without pulling</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-forest-medium mt-0.5 flex-shrink-0" />
+                    <span>Use breath and body to co-regulate</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-forest-medium mt-0.5 flex-shrink-0" />
+                    <span>Leave with repeatable skills for calmer daily walks</span>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="flex justify-center">
+              <ResponsiveImage 
+                src={walkImage3}
+                alt="Dog and handler enjoying a peaceful decompression walk"
+                className="rounded-2xl shadow-strong w-full max-w-lg"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -373,8 +381,8 @@ const Index = () => {
             Each walk is a guided session on our 100-acre private property. Dogs explore safely on a long line while trainers coach you on handling, timing, and reading your dog's signals. You'll leave with a calmer dog and skills you can use on every walk.
           </p>
           
-          <div className="max-w-5xl mx-auto">
-            <div className="grid gap-6 md:gap-8 lg:gap-10">
+          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
+            <div className="space-y-6 md:space-y-8 lg:space-y-10">
               <div className="flex items-start gap-4 md:gap-6">
                 <div className="w-12 h-12 md:w-16 md:h-16 bg-forest-medium text-white rounded-full flex items-center justify-center font-bold text-xl md:text-2xl flex-shrink-0">
                   1
@@ -405,41 +413,20 @@ const Index = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Perfect For Grid */}
-      <section className="py-12 md:py-16 lg:py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-12 md:mb-16 text-forest-deep">
-            Perfect For
-          </h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
-            {[
-              "If your dog barks and lunges at other dogs",
-              "If your rescue needs a safe way to build confidence",
-              "If you avoid busy sidewalks because walks feel overwhelming",
-              "If your high-energy dog never seems tired after a walk",
-              "If you want calmer, more connected outings with your dog",
-              "If your anxious dog needs gentle confidence building"
-            ].map((item, index) => (
-              <Card key={index} className="shadow-soft hover:shadow-medium transition-smooth">
-                <CardContent className="pt-6 pb-6">
-                  <div className="flex items-start gap-4">
-                    <CheckCircle className="w-6 h-6 md:w-7 md:h-7 text-forest-medium flex-shrink-0 mt-0.5" />
-                    <p className="font-medium text-forest-deep text-left">{item}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+            <div className="flex justify-center">
+              <ResponsiveImage 
+                src={walkImage4}
+                alt="Trainer guiding a dog and handler through the decompression walk experience"
+                className="rounded-2xl shadow-strong w-full max-w-lg"
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-12 md:py-16 lg:py-20 bg-gradient-subtle">
+      <section id="faq" className="py-12 md:py-16 lg:py-20">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-12 md:mb-16 text-forest-deep">
             Frequently Asked Questions
@@ -589,7 +576,7 @@ const Index = () => {
       </section>
 
       {/* Pricing & Location */}
-      <section className="py-12 md:py-16 lg:py-20">
+      <section className="py-12 md:py-16 lg:py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Pricing */}
@@ -717,7 +704,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-12 md:py-16 lg:py-20 bg-gradient-subtle">
+      <section className="py-12 md:py-16 lg:py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-12 text-forest-deep">
             What Handlers Are Saying
