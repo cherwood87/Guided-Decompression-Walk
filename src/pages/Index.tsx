@@ -20,7 +20,7 @@ const Index = () => {
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <div className="font-bold text-forest-deep text-lg md:text-xl">Guided Decompression Walks</div>
+          <div className="font-bold text-forest-deep text-lg md:text-xl">The Decompression Method</div>
           <div className="flex items-center gap-4">
             <button 
               onClick={() => scrollToSection('faq')}
