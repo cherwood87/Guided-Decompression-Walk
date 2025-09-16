@@ -257,7 +257,7 @@ const Index = () => {
                         variant="soft" 
                         size="lg" 
                         className="w-full"
-                        onClick={() => window.open('mailto:cherwood87@gmail.com?subject=Workshop Inquiry', '_blank')}
+                        onClick={() => window.open('https://petintel.ca/products/decompression-walks-workshop?_pos=2&_psq=decom&_ss=e&_v=1.0', '_blank')}
                       >
                         Learn About Workshops
                       </Button>
