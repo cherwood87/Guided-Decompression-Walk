@@ -307,7 +307,7 @@ const Index = () => {
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-0" />
-                    <span>Methods backed by modern brain science</span>
+                    <span>Modern methods for real behavior change</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-0" />
