@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { ArrowDown, MapPin, Clock, DollarSign, Users, Heart, Brain, Target, ChevronDown, CheckCircle, Play, TrendingUp, ExternalLink, Facebook, Instagram, Check, X, Star, Award, Shield } from 'lucide-react';
 import { ResponsiveImage } from '@/components/ResponsiveImage';
+import Footer from '@/components/Footer';
 import heroImage from '@/assets/IMG_5728.jpeg';
 import walkImage1 from '@/assets/IMG_0484.jpeg';
 import walkImage2 from '@/assets/IMG_5703.jpeg';
@@ -853,50 +854,7 @@ const GuidedDecompressionWalks = () => {
         </div>
       </section>
       
-      {/* Footer */}
-      <footer className="bg-forest-deep text-white py-12 md:py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">            
-            <div className="border-t border-white/20 pt-8">
-              <div className="grid md:grid-cols-2 gap-8 text-center md:text-left">
-                {/* Street Wise Canine */}
-                <div>
-                  <h4 className="font-semibold text-lg mb-4">Street Wise Canine</h4>
-                  <div className="space-y-2">
-                    <a 
-                      href="https://streetsmartcanine.ca" 
-                      className="block text-white/80 hover:text-white transition-colors"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Website
-                    </a>
-                  </div>
-                </div>
-
-                {/* Pet Intel */}
-                <div>
-                  <h4 className="font-semibold text-lg mb-4">Pet Intel</h4>
-                  <div className="space-y-2">
-                    <a 
-                      href="https://petintel.ca" 
-                      className="block text-white/80 hover:text-white transition-colors"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Website
-                    </a>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="text-center text-white/60 text-sm mt-8 pt-8 border-t border-white/20">
-                © 2024 The Decompression Method. All rights reserved.
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
 
       {/* Sticky Mobile CTA */}
       <div className="fixed bottom-4 left-4 right-4 z-40 md:hidden">

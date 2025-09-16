@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { ArrowRight, MapPin, Clock, Users, Heart, Brain, Target, CheckCircle, BookOpen, Award, Compass } from 'lucide-react';
 import { ResponsiveImage } from '@/components/ResponsiveImage';
 import { Link } from 'react-router-dom';
+import Footer from '@/components/Footer';
 import heroImage from '@/assets/IMG_5713.jpg';
 import walkImage1 from '@/assets/IMG_5736.jpeg';
 import walkImage2 from '@/assets/Image 1.jpg';
@@ -498,63 +499,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-forest-deep text-white py-12 md:py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-2xl md:text-3xl font-bold mb-6">Walks Don't Have to Be Hard</h3>
-            
-            <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-              Join the families who've discovered that the best walks happen when both species 
-              feel safe, understood, and free to be themselves.
-            </p>
-            
-            <Link to="/guided-walks">
-              <Button variant="hero-outline" size="lg" className="mb-12">
-                Let's Get Started
-              </Button>
-            </Link>
-            
-            <div className="border-t border-white/20 pt-8">
-              <div className="grid md:grid-cols-2 gap-8 text-center md:text-left">
-                {/* Street Wise Canine */}
-                <div>
-                  <h4 className="font-semibold text-lg mb-4">Street Wise Canine</h4>
-                  <div className="space-y-2">
-                    <a 
-                      href="https://streetwisecanine.ca" 
-                      className="block text-white/80 hover:text-white transition-colors"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      streetsmartcanine.ca
-                    </a>
-                  </div>
-                </div>
-                
-                {/* Pet Intel */}
-                <div>
-                  <h4 className="font-semibold text-lg mb-4">Pet Intel</h4>
-                  <div className="space-y-2">
-                    <a 
-                      href="https://petintel.ca" 
-                      className="block text-white/80 hover:text-white transition-colors"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      petintel.ca
-                    </a>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="text-center mt-8 pt-8 border-t border-white/20 text-white/60 text-sm">
-                © {new Date().getFullYear()} The Decompression Method. All rights reserved.
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
