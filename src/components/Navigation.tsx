@@ -34,8 +34,29 @@ export function Navigation({ items }: NavigationProps) {
           The Decompression Method
         </Link>
         
-        {/* Menu Button */}
-        <div>
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center gap-6">
+          {items.slice(0, -1).map((item, index) => (
+            <button
+              key={index}
+              onClick={item.action}
+              className="text-forest-medium hover:text-forest-deep transition-colors"
+            >
+              {item.label}
+            </button>
+          ))}
+          <Button 
+            variant="hero" 
+            size="sm"
+            className="h-10 px-4 md:h-12 md:px-6"
+            onClick={() => window.open('mailto:cherwood87@gmail.com', '_blank')}
+          >
+            Contact
+          </Button>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
           <button
             onClick={toggleMenu}
             className="p-2 text-forest-medium hover:text-forest-deep transition-colors"
@@ -50,9 +71,9 @@ export function Navigation({ items }: NavigationProps) {
         </div>
       </div>
 
-      {/* Dropdown Menu */}
+      {/* Mobile Dropdown Menu */}
       {isOpen && (
-        <div className="bg-background/98 backdrop-blur-sm border-b border-border shadow-lg">
+        <div className="md:hidden bg-background/98 backdrop-blur-sm border-b border-border shadow-lg">
           <div className="container mx-auto px-4 py-4 space-y-4">
             {items.slice(0, -1).map((item, index) => (
               <button

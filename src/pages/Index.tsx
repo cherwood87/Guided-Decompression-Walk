@@ -4,36 +4,47 @@ import { Badge } from '@/components/ui/badge';
 import { ArrowRight, MapPin, Clock, Users, Heart, Brain, Target, CheckCircle, BookOpen, Award, Compass } from 'lucide-react';
 import { ResponsiveImage } from '@/components/ResponsiveImage';
 import { Link } from 'react-router-dom';
+import { Navigation } from '@/components/Navigation';
+import Footer from '@/components/Footer';
 import heroImage from '@/assets/IMG_5713.jpg';
 import walkImage1 from '@/assets/IMG_5736.jpeg';
-import walkImage2 from '@/assets/IMG_8247.jpeg';
+import walkImage2 from '@/assets/Image 1.jpg';
+
 const Index = () => {
   const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({
-      behavior: 'smooth'
-    });
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
-  return <div className="min-h-screen bg-background">
-      {/* Fixed Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <div className="font-bold text-forest-deep text-lg md:text-xl">The Decompression Method</div>
-          <div className="flex items-center gap-4">
-            <Link to="/guided-walks" className="hidden md:inline-block text-forest-medium hover:text-forest-deep transition-colors">
-              Guided Walks
-            </Link>
-            <Button variant="hero" size="sm" className="touch-target h-10 px-4 md:h-12 md:px-6" onClick={() => window.open('mailto:cherwood87@gmail.com', '_blank')}>
-              Contact
-            </Button>
-          </div>
-        </div>
-      </nav>
+
+  const navigationItems = [
+    {
+      label: 'LISTEN Method',
+      action: () => scrollToSection('method'),
+      type: 'scroll' as const
+    },
+    {
+      label: 'Programs',
+      action: () => scrollToSection('programs'),
+      type: 'scroll' as const
+    },
+    {
+      label: 'Guided Walks',
+      action: () => window.location.href = '/guided-walks',
+      type: 'link' as const
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-background">
+      <Navigation items={navigationItems} />
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2)), url(${heroImage})`
-      }} />
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ 
+            backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2)), url(${heroImage})` 
+          }}
+        />
         <div className="relative z-10 w-full max-w-4xl p-4 text-center text-white">
           <div className="mb-6">
             <span className="inline-block bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 text-sm font-medium">
@@ -55,7 +66,14 @@ const Index = () => {
                 Try a Guided Walk
               </Button>
             </Link>
-            <Button variant="hero-outline" size="lg" className="w-full sm:w-auto" onClick={() => scrollToSection('method')}>Learn More</Button>
+            <Button 
+              variant="hero-outline" 
+              size="lg" 
+              className="w-full sm:w-auto"
+              onClick={() => scrollToSection('method')}
+            >
+              Learn Our Approach
+            </Button>
           </div>
         </div>
       </section>
@@ -119,7 +137,7 @@ const Index = () => {
       </section>
 
       {/* Programs Section */}
-      <section className="py-16 lg:py-20">
+      <section id="programs" className="py-16 lg:py-20">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-forest-deep">
@@ -178,7 +196,11 @@ const Index = () => {
             </div>
 
             <div className="order-1 lg:order-2">
-              <ResponsiveImage src={walkImage1} alt="Dog exploring freely during a guided decompression walk" className="rounded-xl shadow-medium w-full" />
+              <ResponsiveImage 
+                src={walkImage1}
+                alt="Dog exploring freely during a guided decompression walk"
+                className="rounded-xl shadow-medium w-full"
+              />
             </div>
           </div>
 
@@ -297,7 +319,11 @@ const Index = () => {
                 </div>
                 
                 <div className="pt-4">
-                  <Button variant="soft" className="w-full" onClick={() => window.open('mailto:cherwood87@gmail.com?subject=Professional Inquiry', '_blank')}>
+                  <Button 
+                    variant="soft" 
+                    className="w-full"
+                    onClick={() => window.open('mailto:cherwood87@gmail.com?subject=Professional Inquiry', '_blank')}
+                  >
                     Ask About Professional Training
                   </Button>
                 </div>
@@ -321,31 +347,39 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[{
-            letter: "L",
-            word: "Listen",
-            description: "Pay attention to what your dog's body is telling you"
-          }, {
-            letter: "I",
-            word: "Invite",
-            description: "Give them choices about where to go and what to explore"
-          }, {
-            letter: "S",
-            word: "Support",
-            description: "Help them stay calm when they get overwhelmed"
-          }, {
-            letter: "T",
-            word: "Trust",
-            description: "Let them work through their feelings without rushing"
-          }, {
-            letter: "E",
-            word: "Engage",
-            description: "Be present and calm, not distracted or anxious"
-          }, {
-            letter: "N",
-            word: "Nurture",
-            description: "Build good memories and positive experiences together"
-          }].map((item, index) => <Card key={index} className="shadow-soft hover:shadow-medium transition-smooth">
+            {[
+              {
+                letter: "L",
+                word: "Listen",
+                description: "Pay attention to what your dog's body is telling you"
+              },
+              {
+                letter: "I", 
+                word: "Invite",
+                description: "Give them choices about where to go and what to explore"
+              },
+              {
+                letter: "S",
+                word: "Support", 
+                description: "Help them stay calm when they get overwhelmed"
+              },
+              {
+                letter: "T",
+                word: "Trust",
+                description: "Let them work through their feelings without rushing"
+              },
+              {
+                letter: "E",
+                word: "Engage",
+                description: "Be present and calm, not distracted or anxious"
+              },
+              {
+                letter: "N",
+                word: "Nurture", 
+                description: "Build good memories and positive experiences together"
+              }
+            ].map((item, index) => (
+              <Card key={index} className="shadow-soft hover:shadow-medium transition-smooth">
                 <CardContent className="pt-6">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-forest-medium text-white rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0">
@@ -357,7 +391,8 @@ const Index = () => {
                     </div>
                   </div>
                 </CardContent>
-              </Card>)}
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -403,7 +438,11 @@ const Index = () => {
             </div>
 
             <div>
-              <ResponsiveImage src={walkImage2} alt="Peaceful dog exploring in natural environment" className="rounded-xl shadow-medium w-full" />
+              <ResponsiveImage 
+                src={walkImage2}
+                alt="Peaceful dog exploring in natural environment"
+                className="rounded-xl shadow-medium w-full"
+              />
             </div>
           </div>
         </div>
@@ -445,7 +484,11 @@ const Index = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Button variant="soft" className="w-full" onClick={() => window.open('mailto:cherwood87@gmail.com?subject=Tell Me More', '_blank')}>
+                <Button 
+                  variant="soft" 
+                  className="w-full"
+                  onClick={() => window.open('mailto:cherwood87@gmail.com?subject=Tell Me More', '_blank')}
+                >
                   Ask Questions
                 </Button>
               </CardContent>
@@ -454,53 +497,9 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-forest-deep text-white py-12 md:py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-2xl md:text-3xl font-bold mb-6">Walks Don't Have to Be Hard</h3>
-            
-            <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-              Join the families who've discovered that the best walks happen when both species 
-              feel safe, understood, and free to be themselves.
-            </p>
-            
-            <Link to="/guided-walks">
-              <Button variant="hero-outline" size="lg" className="mb-12">
-                Let's Get Started
-              </Button>
-            </Link>
-            
-            <div className="border-t border-white/20 pt-8">
-              <div className="grid md:grid-cols-2 gap-8 text-center md:text-left">
-                {/* Street Wise Canine */}
-                <div>
-                  <h4 className="font-semibold text-lg mb-4">Street Wise Canine</h4>
-                  <div className="space-y-2">
-                    <a href="https://streetwisecanine.ca" className="block text-white/80 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
-                      streetsmartcanine.ca
-                    </a>
-                  </div>
-                </div>
-                
-                {/* Pet Intel */}
-                <div>
-                  <h4 className="font-semibold text-lg mb-4">Pet Intel</h4>
-                  <div className="space-y-2">
-                    <a href="https://petintel.ca" className="block text-white/80 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
-                      petintel.ca
-                    </a>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="text-center mt-8 pt-8 border-t border-white/20 text-white/60 text-sm">
-                © {new Date().getFullYear()} The Decompression Method. All rights reserved.
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>;
+      <Footer />
+    </div>
+  );
 };
+
 export default Index;
