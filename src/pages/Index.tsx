@@ -49,7 +49,7 @@ const Index = () => {
         <div className="relative z-10 w-full max-w-4xl p-4 text-center text-white">
           <div className="mb-6">
             <span className="inline-block bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 text-sm font-medium">
-              A Better Way to Walk with Your Dog
+              What if your dog was trying to tell you something?
             </span>
           </div>
           
