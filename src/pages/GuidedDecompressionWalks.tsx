@@ -52,10 +52,17 @@ const GuidedDecompressionWalks = () => {
           <div className="bg-white/75 lg:bg-transparent backdrop-blur-lg lg:backdrop-blur-none rounded-2xl lg:rounded-none p-4 lg:p-0 shadow-xl lg:shadow-none lg:text-white">
             <div className="lg:mb-4">
               <span className="inline-block bg-forest-medium/20 lg:bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-medium text-forest-deep lg:text-white">
-                It's not about the miles, it's about the moments.
+                Guided Decompression Walks
               </span>
             </div>
-        
+            
+            <h1 className="text-xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold mb-3 lg:mb-4 leading-tight text-forest-deep lg:text-white">
+              It's not about the miles, 
+            </h1>
+            
+            <h2 className="text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-light mb-4 lg:mb-6 text-forest-medium lg:text-white/90">
+              it's about the moments.
+            </h2>
             
             <p className="text-sm lg:text-lg xl:text-xl mb-6 lg:mb-8 leading-relaxed text-gray-700 lg:text-white/90">
               Give your dog the freedom to explore while you learn the skills to enjoy calmer, more connected walks together.
@@ -857,7 +864,7 @@ const GuidedDecompressionWalks = () => {
                   <h4 className="font-semibold text-lg mb-4">Street Wise Canine</h4>
                   <div className="space-y-2">
                     <a 
-                      href="https://streetwisecanine.ca" 
+                      href="https://streetsmartcanine.ca" 
                       className="block text-white/80 hover:text-white transition-colors"
                       target="_blank"
                       rel="noopener noreferrer"
