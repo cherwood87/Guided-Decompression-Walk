@@ -767,44 +767,4 @@ const Index = () => {
   );
 };
 
-export default Index;0" />
-                    <span>Stop the pulling and reactivity without fighting</span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-0" />
-                    <span>Learn to read what your dog is trying to tell you</span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-0" />
-                    <span>Develop skills that work at home, vet visits, anywhere</span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-0" />
-                    <span>Perfect for reactive, anxious, or high-energy dogs</span>
-                  </div>
-                </div>
-                
-                <div className="pt-4">
-                  <Link to="/guided-walks">
-                    <Button variant="soft" className="w-full">
-                      Start with Guided Walks
-                    </Button>
-                  </Link>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-medium hover:shadow-strong transition-smooth">
-              <CardHeader>
-                <div className="w-16 h-16 bg-forest-light rounded-full flex items-center justify-center mb-4">
-                  <Award className="w-8 h-8 text-forest-deep" />
-                </div>
-                <CardTitle className="text-2xl text-forest-deep">Dog Professionals</CardTitle>
-                <CardDescription className="text-base">
-                  Add gentle, effective methods that work with the toughest cases
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="space-y-3">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-
+export default Index;
