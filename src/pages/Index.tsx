@@ -55,7 +55,7 @@ const Index = () => {
                 Try a Guided Walk
               </Button>
             </Link>
-            <Button variant="hero-outline" size="lg" className="w-full sm:w-auto" onClick={() => scrollToSection('method')}>Guided Decompression Walks</Button>
+            <Button variant="hero-outline" size="lg" className="w-full sm:w-auto" onClick={() => scrollToSection('method')}>Learn More</Button>
           </div>
         </div>
       </section>
