@@ -3,6 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { ArrowDown, MapPin, Clock, DollarSign, Users, Heart, Brain, Target, ChevronDown, CheckCircle, Play, TrendingUp, ExternalLink, Facebook, Instagram, Check, X, Star, Award, Shield } from 'lucide-react';
 import { ResponsiveImage } from '@/components/ResponsiveImage';
+import { Navigation } from '@/components/Navigation';
+import { useNavigate } from 'react-router-dom';
 import heroImage from '@/assets/IMG_5728.jpeg';
 import walkImage1 from '@/assets/IMG_0484.jpeg';
 import walkImage2 from '@/assets/IMG_5703.jpeg';
@@ -11,65 +13,43 @@ import walkImage4 from '@/assets/IMG_5736.jpeg';
 import walkImage5 from '@/assets/IMG_5744.jpeg';
 
 const GuidedDecompressionWalks = () => {
+  const navigate = useNavigate();
+  
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const navigationItems = [
+    {
+      label: 'Home',
+      action: () => navigate('/'),
+      type: 'link' as const
+    },
+    {
+      label: 'About',
+      action: () => scrollToSection('stats'),
+      type: 'scroll' as const
+    },
+    {
+      label: 'FAQ',
+      action: () => scrollToSection('faq'),
+      type: 'scroll' as const
+    },
+    {
+      label: 'Pricing',
+      action: () => scrollToSection('pricing'),
+      type: 'scroll' as const
+    },
+    {
+      label: 'Contact',
+      action: () => window.open('mailto:cherwood87@gmail.com', '_blank'),
+      type: 'scroll' as const
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
-      {/* Fixed Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <div className="font-bold text-forest-deep text-lg md:text-xl">The Decompression Method</div>
-          
-          <div className="hidden md:flex items-center gap-6">
-            <button 
-              onClick={() => window.location.href = '/'}
-              className="text-forest-medium hover:text-forest-deep transition-colors"
-            >
-              Home
-            </button>
-            <button 
-              onClick={() => scrollToSection('stats')}
-              className="text-forest-medium hover:text-forest-deep transition-colors"
-            >
-              About
-            </button>
-            <button 
-              onClick={() => scrollToSection('faq')}
-              className="text-forest-medium hover:text-forest-deep transition-colors"
-            >
-              FAQ
-            </button>
-            <button 
-              onClick={() => scrollToSection('pricing')}
-              className="text-forest-medium hover:text-forest-deep transition-colors"
-            >
-              Pricing
-            </button>
-            <Button 
-              variant="hero" 
-              size="sm"
-              className="touch-target h-10 px-4 md:h-12 md:px-6"
-              onClick={() => window.open('mailto:cherwood87@gmail.com', '_blank')}
-            >
-              Contact
-            </Button>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <Button 
-              variant="hero" 
-              size="sm"
-              className="touch-target h-10 px-4"
-              onClick={() => window.open('mailto:cherwood87@gmail.com', '_blank')}
-            >
-              Contact
-            </Button>
-          </div>
-        </div>
-      </nav>
+      <Navigation items={navigationItems} />
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-end lg:items-start justify-center lg:justify-end overflow-hidden pt-16">
