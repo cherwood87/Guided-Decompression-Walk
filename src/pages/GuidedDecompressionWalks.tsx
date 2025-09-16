@@ -5,9 +5,9 @@ import { ArrowDown, MapPin, Clock, DollarSign, Users, Heart, Brain, Target, Chev
 import { ResponsiveImage } from '@/components/ResponsiveImage';
 import heroImage from '@/assets/IMG_5728.jpeg';
 import walkImage1 from '@/assets/IMG_0484.jpeg';
-import walkImage2 from '@/assets/IMG_5703.jpeg';
+import walkImage2 from '@/assets/IMG_9603.jpeg';
 import walkImage3 from '@/assets/IMG_0443.jpeg';
-import walkImage4 from '@/assets/Image 2.jpg';
+import walkImage4 from '@/assets/IMG_5736.jpeg';
 import walkImage5 from '@/assets/IMG_5744.jpeg';
 
 const GuidedDecompressionWalks = () => {
