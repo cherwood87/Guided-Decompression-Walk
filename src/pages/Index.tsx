@@ -6,7 +6,7 @@ import { ResponsiveImage } from '@/components/ResponsiveImage';
 import { Link } from 'react-router-dom';
 import heroImage from '@/assets/IMG_5713.jpg';
 import walkImage1 from '@/assets/IMG_5736.jpeg';
-import walkImage2 from '@/assets/IMG_0039.heic';
+import walkImage2 from '@/assets/IMG_0074.jpeg';
 
 const Index = () => {
   const scrollToSection = (id: string) => {
