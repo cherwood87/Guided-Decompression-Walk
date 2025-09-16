@@ -22,10 +22,23 @@ const Index = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           <div className="font-bold text-forest-deep text-lg md:text-xl">The Decompression Method</div>
-          <div className="flex items-center gap-4">
+          
+          <div className="hidden md:flex items-center gap-6">
+            <button 
+              onClick={() => scrollToSection('method')}
+              className="text-forest-medium hover:text-forest-deep transition-colors"
+            >
+              LISTEN Method
+            </button>
+            <button 
+              onClick={() => scrollToSection('workshops')}
+              className="text-forest-medium hover:text-forest-deep transition-colors"
+            >
+              Workshops
+            </button>
             <Link 
               to="/guided-walks"
-              className="hidden md:inline-block text-forest-medium hover:text-forest-deep transition-colors"
+              className="text-forest-medium hover:text-forest-deep transition-colors"
             >
               Guided Walks
             </Link>
@@ -33,6 +46,18 @@ const Index = () => {
               variant="hero" 
               size="sm"
               className="touch-target h-10 px-4 md:h-12 md:px-6"
+              onClick={() => window.open('mailto:cherwood87@gmail.com', '_blank')}
+            >
+              Contact
+            </Button>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <Button 
+              variant="hero" 
+              size="sm"
+              className="touch-target h-10 px-4"
               onClick={() => window.open('mailto:cherwood87@gmail.com', '_blank')}
             >
               Contact
@@ -142,7 +167,7 @@ const Index = () => {
       </section>
 
       {/* How You Both Learn */}
-      <section className="py-16 lg:py-20">
+      <section id="workshops" className="py-16 lg:py-20">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-forest-deep">

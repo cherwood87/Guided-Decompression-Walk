@@ -24,6 +24,12 @@ const GuidedDecompressionWalks = () => {
           
           <div className="hidden md:flex items-center gap-6">
             <button 
+              onClick={() => window.location.href = '/'}
+              className="text-forest-medium hover:text-forest-deep transition-colors"
+            >
+              Home
+            </button>
+            <button 
               onClick={() => scrollToSection('stats')}
               className="text-forest-medium hover:text-forest-deep transition-colors"
             >
