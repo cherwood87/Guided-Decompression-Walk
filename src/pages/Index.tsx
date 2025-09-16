@@ -58,12 +58,8 @@ const Index = () => {
           </h1>
           
           <h2 className="text-xl lg:text-2xl xl:text-3xl font-light mb-8 text-white/90 max-w-3xl mx-auto">
-            Where dogs feel heard and handlers finally understand
+            Where walks become conversations
           </h2>
-          
-          <p className="text-lg lg:text-xl mb-10 leading-relaxed text-white/90 max-w-2xl mx-auto">
-            What if walks weren't about control, but connection? What if your dog's pulling and reactivity weren't problems to fix, but messages to understand?
-          </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
             <Link to="/guided-walks">
