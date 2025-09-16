@@ -4,38 +4,39 @@ import { Badge } from '@/components/ui/badge';
 import { ArrowRight, MapPin, Clock, Users, Heart, Brain, Target, CheckCircle, BookOpen, Award, Compass } from 'lucide-react';
 import { ResponsiveImage } from '@/components/ResponsiveImage';
 import { Link } from 'react-router-dom';
-import { Navigation } from '@/components/Navigation';
-import Footer from '@/components/Footer';
 import heroImage from '@/assets/IMG_5713.jpg';
 import walkImage1 from '@/assets/IMG_5736.jpeg';
-import walkImage2 from '@/assets/Image 1.jpg';
+import walkImage2 from '@/assets/IMG_8247.jpeg';
 
 const Index = () => {
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const navigationItems = [
-    {
-      label: 'LISTEN Method',
-      action: () => scrollToSection('method'),
-      type: 'scroll' as const
-    },
-    {
-      label: 'Programs',
-      action: () => scrollToSection('programs'),
-      type: 'scroll' as const
-    },
-    {
-      label: 'Guided Walks',
-      action: () => window.location.href = '/guided-walks',
-      type: 'link' as const
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-background">
-      <Navigation items={navigationItems} />
+      {/* Fixed Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+          <div className="font-bold text-forest-deep text-lg md:text-xl">The Decompression Method</div>
+          <div className="flex items-center gap-4">
+            <Link 
+              to="/guided-walks"
+              className="hidden md:inline-block text-forest-medium hover:text-forest-deep transition-colors"
+            >
+              Guided Walks
+            </Link>
+            <Button 
+              variant="hero" 
+              size="sm"
+              className="touch-target h-10 px-4 md:h-12 md:px-6"
+              onClick={() => window.open('mailto:cherwood87@gmail.com', '_blank')}
+            >
+              Contact
+            </Button>
+          </div>
+        </div>
+      </nav>
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
@@ -48,7 +49,7 @@ const Index = () => {
         <div className="relative z-10 w-full max-w-4xl p-4 text-center text-white">
           <div className="mb-6">
             <span className="inline-block bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 text-sm font-medium">
-              What if your dog was trying to tell you something?
+              A Complete System for Living With Dogs
             </span>
           </div>
           
@@ -57,264 +58,406 @@ const Index = () => {
           </h1>
           
           <h2 className="text-xl lg:text-2xl xl:text-3xl font-light mb-8 text-white/90 max-w-3xl mx-auto">
-            Where walks become conversations
+            Where dogs and handlers learn to regulate together
           </h2>
+          
+          <p className="text-lg mb-10 leading-relaxed text-white/90 max-w-2xl mx-auto">
+            What if your dog's pulling, reactivity, and stress weren't problems to fix, but messages to understand? Learn a complete approach to living with your dog—one where both of you develop essential skills for every situation.
+          </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
             <Link to="/guided-walks">
               <Button variant="hero" size="lg" className="w-full sm:w-auto">
-                Try a Guided Walk
+                Experience It Firsthand
               </Button>
             </Link>
             <Button 
               variant="hero-outline" 
               size="lg" 
               className="w-full sm:w-auto"
-              onClick={() => scrollToSection('method')}
+              onClick={() => scrollToSection('complete-problem')}
             >
-              Learn Our Approach
+              Learn the Complete System
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Method Overview */}
-      <section className="py-16 lg:py-20 bg-gradient-subtle">
+      {/* The Complete Problem */}
+      <section id="complete-problem" className="py-16 lg:py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-forest-deep">
-              What Makes This Different
+              The Complete Problem We Solve
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Most training tells dogs what not to do. We help them learn what they actually need. When dogs feel safe to be themselves, everything changes.
+              Most training focuses only on changing the dog's behavior. We focus on developing both partners because stressed dogs can't learn and stressed handlers can't help their dogs regulate.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="shadow-medium hover:shadow-strong transition-smooth text-center">
+          <div className="grid lg:grid-cols-2 gap-12">
+            <Card className="shadow-medium">
               <CardHeader>
-                <div className="w-16 h-16 bg-forest-light rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Brain className="w-8 h-8 text-forest-deep" />
-                </div>
-                <CardTitle className="text-xl text-forest-deep">Calm First</CardTitle>
+                <CardTitle className="text-2xl text-forest-deep flex items-center gap-3">
+                  <Heart className="w-8 h-8" />
+                  For Dogs
+                </CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  When dogs are stressed, they can't learn or listen. We help them find calm so they can actually hear what you're asking.
-                </p>
+              <CardContent className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-forest-medium rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-muted-foreground">Chronic stress prevents learning, choice-making, and natural regulation</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-forest-medium rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-muted-foreground">Dogs stuck in fight-or-flight can't access their thinking brain</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-forest-medium rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-muted-foreground">Without choice and exploration, confidence never develops</p>
+                </div>
               </CardContent>
             </Card>
 
-            <Card className="shadow-medium hover:shadow-strong transition-smooth text-center">
+            <Card className="shadow-medium">
               <CardHeader>
-                <div className="w-16 h-16 bg-forest-light rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Heart className="w-8 h-8 text-forest-deep" />
-                </div>
-                <CardTitle className="text-xl text-forest-deep">Partnership Over Power</CardTitle>
+                <CardTitle className="text-2xl text-forest-deep flex items-center gap-3">
+                  <Users className="w-8 h-8" />
+                  For Handlers
+                </CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Strong relationships aren't built on who's in charge. They're built on trust, clear communication, and respect for each other.
-                </p>
+              <CardContent className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-forest-medium rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-muted-foreground">Without regulation skills, you become a stress trigger for your dog</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-forest-medium rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-muted-foreground">Poor communication leads to frustration and daily conflicts</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-forest-medium rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-muted-foreground">Not understanding canine needs creates constant battles</p>
+                </div>
               </CardContent>
             </Card>
+          </div>
 
-            <Card className="shadow-medium hover:shadow-strong transition-smooth text-center">
-              <CardHeader>
-                <div className="w-16 h-16 bg-forest-light rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-forest-deep" />
-                </div>
-                <CardTitle className="text-xl text-forest-deep">Choice Builds Confidence</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Dogs who get to make safe choices become more confident, less reactive, and easier to work with in all situations.
-                </p>
-              </CardContent>
-            </Card>
+          <div className="mt-12 text-center">
+            <p className="text-lg font-medium text-forest-deep bg-forest-light/20 rounded-lg p-6">
+              The Result: Reactive dogs, stressed families, and relationships built on conflict instead of partnership.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Programs Section */}
-      <section id="programs" className="py-16 lg:py-20">
+      {/* How You Both Learn */}
+      <section className="py-16 lg:py-20">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-forest-deep">
-              How It Works
+              How You Both Learn The Complete System
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Experience this approach through our guided walks, where you'll see firsthand how different things can be.
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              This isn't just dog training where you teach and they learn. This is complete relationship development where both of you grow essential skills for living together successfully.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
-            <div className="order-2 lg:order-1">
-              <Card className="shadow-strong border-forest-medium/20 bg-forest-light/10">
-                <CardHeader>
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-12 h-12 bg-forest-medium rounded-full flex items-center justify-center">
-                      <Compass className="w-6 h-6 text-white" />
+          <div className="space-y-16">
+            {/* Experience the Foundation */}
+            <div className="grid lg:grid-cols-2 gap-8 items-center">
+              <div className="order-2 lg:order-1">
+                <Card className="shadow-strong border-forest-medium/20 bg-forest-light/10">
+                  <CardHeader>
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-12 h-12 bg-forest-medium rounded-full flex items-center justify-center">
+                        <Compass className="w-6 h-6 text-white" />
+                      </div>
+                      <Badge variant="secondary" className="bg-forest-medium text-white">Start Here</Badge>
                     </div>
-                    <Badge variant="secondary" className="bg-forest-medium text-white">Available Now</Badge>
+                    <CardTitle className="text-2xl text-forest-deep">Experience the Foundation</CardTitle>
+                    <CardDescription className="text-base">
+                      Guided Decompression Walks let you practice these life skills in real-time
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-3">
+                      <div>
+                        <p className="font-semibold text-forest-deep mb-2">Dogs Experience:</p>
+                        <ul className="text-sm text-muted-foreground space-y-1 ml-4">
+                          <li>• Safe exploration that builds regulation skills</li>
+                          <li>• Choice-making within supportive boundaries</li>
+                          <li>• Natural behavioral cycles without interruption</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-forest-deep mb-2">Handlers Learn:</p>
+                        <ul className="text-sm text-muted-foreground space-y-1 ml-4">
+                          <li>• Reading behavioral states and energy management</li>
+                          <li>• Communication without control or force</li>
+                          <li>• Skills that transfer to home, vet visits, everywhere</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="pt-4">
+                      <Link to="/guided-walks">
+                        <Button variant="nature" size="lg" className="w-full">
+                          Book Your Foundation Experience
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </Button>
+                      </Link>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              <div className="order-1 lg:order-2">
+                <ResponsiveImage 
+                  src={walkImage1}
+                  alt="Dog and handler learning together during guided decompression walk"
+                  className="rounded-xl shadow-medium w-full"
+                />
+              </div>
+            </div>
+
+            {/* Master the Complete System */}
+            <div className="grid lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <ResponsiveImage 
+                  src={walkImage2}
+                  alt="Handler and dog practicing complete decompression method skills"
+                  className="rounded-xl shadow-medium w-full"
+                />
+              </div>
+
+              <div>
+                <Card className="shadow-strong border-forest-medium/20 bg-forest-light/10">
+                  <CardHeader>
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-12 h-12 bg-forest-medium rounded-full flex items-center justify-center">
+                        <BookOpen className="w-6 h-6 text-white" />
+                      </div>
+                      <Badge variant="secondary" className="bg-forest-medium text-white">Coming Soon</Badge>
+                    </div>
+                    <CardTitle className="text-2xl text-forest-deep">Master the Complete System</CardTitle>
+                    <CardDescription className="text-base">
+                      Decompression Method Workshops teach both species everything needed for daily life success
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-3">
+                      <div>
+                        <p className="font-semibold text-forest-deep mb-2">Complete Handler Development:</p>
+                        <ul className="text-sm text-muted-foreground space-y-1 ml-4">
+                          <li>• Personal nervous system regulation techniques</li>
+                          <li>• Advanced communication and timing skills</li>
+                          <li>• Equipment knowledge and environmental management</li>
+                          <li>• Problem prevention for home, vet, travel, visitors</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-forest-deep mb-2">Complete Dog Development:</p>
+                        <ul className="text-sm text-muted-foreground space-y-1 ml-4">
+                          <li>• Six behavioral state mastery and self-regulation</li>
+                          <li>• Confidence building through guided choice-making</li>
+                          <li>• Natural communication and trust building</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="pt-4">
+                      <Button 
+                        variant="soft" 
+                        size="lg" 
+                        className="w-full"
+                        onClick={() => window.open('mailto:cherwood87@gmail.com?subject=Workshop Information', '_blank')}
+                      >
+                        Join Workshop Interest List
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+
+            {/* Share This Knowledge */}
+            <div className="text-center">
+              <Card className="shadow-strong border-forest-medium/20 bg-forest-light/10 max-w-2xl mx-auto">
+                <CardHeader>
+                  <div className="flex items-center justify-center gap-3 mb-3">
+                    <div className="w-12 h-12 bg-forest-medium rounded-full flex items-center justify-center">
+                      <Award className="w-6 h-6 text-white" />
+                    </div>
+                    <Badge variant="secondary" className="bg-forest-medium text-white">Coming 2025</Badge>
                   </div>
-                  <CardTitle className="text-2xl text-forest-deep">Guided Decompression Walks</CardTitle>
+                  <CardTitle className="text-2xl text-forest-deep">Share This Knowledge</CardTitle>
                   <CardDescription className="text-base">
-                    See what happens when your dog gets to be a dog
+                    Professional Certification prepares you to guide other families through complete transformation
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-0" />
-                      <span>60 minutes on 100 private acres—space to breathe</span>
+                      <span className="text-sm">Complete methodology training and business support</span>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-0" />
-                      <span>Learn to read what your dog is really telling you</span>
+                      <span className="text-sm">Quality assurance and ongoing mentorship</span>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-0" />
-                      <span>30-foot line means freedom to explore safely</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-0" />
-                      <span>Perfect for dogs who pull, react, or seem stressed</span>
+                      <span className="text-sm">Help families discover relationship-based approaches</span>
                     </div>
                   </div>
 
                   <div className="pt-4">
-                    <Link to="/guided-walks">
-                      <Button variant="nature" size="lg" className="w-full">
-                        Learn More About Guided Walks
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Button>
-                    </Link>
+                    <Button 
+                      variant="soft" 
+                      size="lg" 
+                      className="w-full"
+                      onClick={() => window.open('mailto:cherwood87@gmail.com?subject=Certification Interest', '_blank')}
+                    >
+                      Join Professional Interest List
+                    </Button>
                   </div>
                 </CardContent>
-              </Card>
-            </div>
-
-            <div className="order-1 lg:order-2">
-              <ResponsiveImage 
-                src={walkImage1}
-                alt="Dog exploring freely during a guided decompression walk"
-                className="rounded-xl shadow-medium w-full"
-              />
-            </div>
-          </div>
-
-          {/* Coming Soon Programs */}
-          <div className="mt-16 text-center">
-            <h3 className="text-2xl font-bold mb-8 text-forest-deep">What's Next</h3>
-            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              <Card className="shadow-soft opacity-75">
-                <CardHeader>
-                  <div className="flex items-center justify-between mb-3">
-                    <div className="w-12 h-12 bg-muted rounded-full flex items-center justify-center">
-                      <Award className="w-6 h-6 text-muted-foreground" />
-                    </div>
-                    <Badge variant="outline">Coming 2025</Badge>
-                  </div>
-                  <CardTitle className="text-xl">Train the Trainers</CardTitle>
-                  <CardDescription>
-                    Teaching other dog professionals this gentler way of working with dogs and their families
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-
-              <Card className="shadow-soft opacity-75">
-                <CardHeader>
-                  <div className="flex items-center justify-between mb-3">
-                    <div className="w-12 h-12 bg-muted rounded-full flex items-center justify-center">
-                      <BookOpen className="w-6 h-6 text-muted-foreground" />
-                    </div>
-                    <Badge variant="outline">Coming 2025</Badge>
-                  </div>
-                  <CardTitle className="text-xl">Learn from Home</CardTitle>
-                  <CardDescription>
-                    Online courses so you can practice these skills in your own neighborhood and routine
-                  </CardDescription>
-                </CardHeader>
               </Card>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Audience Pathways */}
-      <section className="py-16 lg:py-20 bg-gradient-subtle">
+      {/* LISTEN Method - Complete Framework */}
+      <section id="method" className="py-16 lg:py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-forest-deep">
-              Who This Helps
+              The LISTEN System - Your Complete Framework
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Whether you're struggling with daily walks or you're a trainer looking for better tools, 
-              this approach meets you where you are.
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Six principles that work everywhere—at home, on walks, at the vet, during storms, with visitors, and in every situation where both of you need to stay calm and connected.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
-            <Card className="shadow-medium hover:shadow-strong transition-smooth">
-              <CardHeader>
-                <div className="w-16 h-16 bg-forest-light rounded-full flex items-center justify-center mb-4">
-                  <Users className="w-8 h-8 text-forest-deep" />
-                </div>
-                <CardTitle className="text-2xl text-forest-deep">Dog Families</CardTitle>
-                <CardDescription className="text-base">
-                  Turn stressful walks into the best part of your day, for both of you
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="space-y-3">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-0" />
-                    <span>Finally understand what your dog is trying to tell you</span>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                letter: "L",
+                word: "Listen",
+                dogLearns: "Their communication is valued and understood",
+                handlerLearns: "To read body language, energy, and environmental cues",
+                together: "You develop a shared language"
+              },
+              {
+                letter: "I", 
+                word: "Invite",
+                dogLearns: "To make choices and explore within safe boundaries",
+                handlerLearns: "To offer opportunities without demanding compliance",
+                together: "You build trust through respectful interaction"
+              },
+              {
+                letter: "S",
+                word: "Support", 
+                dogLearns: "To regulate their nervous system during stress",
+                handlerLearns: "Tools for staying calm and helping during overwhelm",
+                together: "You become each other's safe harbor"
+              },
+              {
+                letter: "T",
+                word: "Trust",
+                dogLearns: "To work through emotions without being rushed",
+                handlerLearns: "To be patient with natural processes and timing",
+                together: "You develop confidence in each other"
+              },
+              {
+                letter: "E",
+                word: "Engage",
+                dogLearns: "That humans can be present partners, not just directors",
+                handlerLearns: "Mindfulness, presence, and quality attention",
+                together: "You create meaningful connection"
+              },
+              {
+                letter: "N",
+                word: "Nurture", 
+                dogLearns: "That positive experiences with humans are safe and predictable",
+                handlerLearns: "To celebrate small moments and build on success",
+                together: "You strengthen your bond through shared joy"
+              }
+            ].map((item, index) => (
+              <Card key={index} className="shadow-soft hover:shadow-medium transition-smooth">
+                <CardContent className="pt-6">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-12 h-12 bg-forest-medium text-white rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0">
+                      {item.letter}
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-forest-deep text-lg mb-2">{item.word}</h3>
+                    </div>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-0" />
-                    <span>Learn simple techniques that actually work</span>
+                  <div className="space-y-3 text-xs">
+                    <div>
+                      <p className="font-semibold text-forest-deep">Dogs learn:</p>
+                      <p className="text-muted-foreground">{item.dogLearns}</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-forest-deep">Handlers learn:</p>
+                      <p className="text-muted-foreground">{item.handlerLearns}</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-forest-deep">Together:</p>
+                      <p className="text-muted-foreground">{item.together}</p>
+                    </div>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-0" />
-                    <span>Stop the pulling and reactivity without fighting</span>
-                  </div>
-                </div>
-                
-                <div className="pt-4">
-                  <Link to="/guided-walks">
-                    <Button variant="soft" className="w-full">
-                      Book Your First Walk
-                    </Button>
-                  </Link>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <Card className="shadow-medium hover:shadow-strong transition-smooth">
+      {/* What Changes for Both */}
+      <section className="py-16 lg:py-20">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-forest-deep">
+              What Changes for Both of You
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              When both species learn regulation skills together, everything else becomes possible. This creates lasting change that transforms your entire relationship.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* For Dogs */}
+            <Card className="shadow-medium">
               <CardHeader>
                 <div className="w-16 h-16 bg-forest-light rounded-full flex items-center justify-center mb-4">
                   <Award className="w-8 h-8 text-forest-deep" />
                 </div>
                 <CardTitle className="text-2xl text-forest-deep">Dog Professionals</CardTitle>
                 <CardDescription className="text-base">
-                  Add gentle, effective tools to help the toughest cases
+                  Add gentle, effective methods that work with the toughest cases
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-0" />
-                    <span>Modern methods for real behavior change</span>
+                    <span>Methods backed by modern nervous system science</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-0" />
-                    <span>Methods that reduce stress and build confidence</span>
+                    <span>Tools that reduce stress and build confidence</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-0" />
-                    <span>Professional certification coming soon</span>
+                    <span>Help dogs others have given up on</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-0" />
+                    <span>Professional certification starting 2025</span>
                   </div>
                 </div>
                 
@@ -333,72 +476,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* LISTEN Method */}
-      <section id="method" className="py-16 lg:py-20">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-forest-deep">
-              The LISTEN Approach
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Six simple steps that change everything about how you and your dog experience walks together. 
-              No complicated theories—just practical ways to connect.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                letter: "L",
-                word: "Listen",
-                description: "Pay attention to what your dog's body is telling you"
-              },
-              {
-                letter: "I", 
-                word: "Invite",
-                description: "Give them choices about where to go and what to explore"
-              },
-              {
-                letter: "S",
-                word: "Support", 
-                description: "Help them stay calm when they get overwhelmed"
-              },
-              {
-                letter: "T",
-                word: "Trust",
-                description: "Let them work through their feelings without rushing"
-              },
-              {
-                letter: "E",
-                word: "Engage",
-                description: "Be present and calm, not distracted or anxious"
-              },
-              {
-                letter: "N",
-                word: "Nurture", 
-                description: "Build good memories and positive experiences together"
-              }
-            ].map((item, index) => (
-              <Card key={index} className="shadow-soft hover:shadow-medium transition-smooth">
-                <CardContent className="pt-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-forest-medium text-white rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0">
-                      {item.letter}
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-forest-deep text-lg mb-2">{item.word}</h3>
-                      <p className="text-muted-foreground text-sm">{item.description}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why This Works */}
-      <section className="py-16 lg:py-20 bg-gradient-subtle">
+      {/* Why This Actually Works */}
+      <section className="py-16 lg:py-20">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -407,7 +486,7 @@ const Index = () => {
               </h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                 This isn't just wishful thinking. Modern research on how mammal brains work shows us that 
-                dogs need the same basic things we do: safety, choice, and understanding.
+                dogs need the same basic things we do: safety, choice, and understanding. When both species learn regulation skills together, everything else becomes possible.
               </p>
               
               <div className="space-y-4">
@@ -415,7 +494,7 @@ const Index = () => {
                   <CheckCircle className="w-6 h-6 text-forest-medium mt-0.5 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-forest-deep mb-1">Curiosity Calms Anxiety</h3>
-                    <p className="text-muted-foreground">When dogs can explore what interests them, their stress naturally decreases</p>
+                    <p className="text-muted-foreground">When dogs can explore what interests them, their stress naturally decreases and confidence builds through their natural SEEKING system</p>
                   </div>
                 </div>
                 
@@ -423,7 +502,7 @@ const Index = () => {
                   <CheckCircle className="w-6 h-6 text-forest-medium mt-0.5 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-forest-deep mb-1">Calm Is Contagious</h3>
-                    <p className="text-muted-foreground">When you're truly relaxed, your dog feels it and starts to relax too</p>
+                    <p className="text-muted-foreground">When you're truly relaxed and regulated, your dog feels it and starts to relax too. This co-regulation creates lasting change</p>
                   </div>
                 </div>
                 
@@ -431,7 +510,7 @@ const Index = () => {
                   <CheckCircle className="w-6 h-6 text-forest-medium mt-0.5 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-forest-deep mb-1">Natural Rhythms Matter</h3>
-                    <p className="text-muted-foreground">Dogs need time to get excited, explore, and then settle down—just like we do</p>
+                    <p className="text-muted-foreground">Dogs need time to get excited, explore, and then settle down—just like we do. Honoring these cycles builds trust and reduces stress</p>
                   </div>
                 </div>
               </div>
@@ -440,7 +519,7 @@ const Index = () => {
             <div>
               <ResponsiveImage 
                 src={walkImage2}
-                alt="Peaceful dog exploring in natural environment"
+                alt="Peaceful dog exploring in natural environment with handler"
                 className="rounded-xl shadow-medium w-full"
               />
             </div>
@@ -448,29 +527,28 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Getting Started */}
-      <section className="py-16 lg:py-20">
+      {/* Your Complete Journey */}
+      <section className="py-16 lg:py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-forest-deep">
-            Ready to Try Something Different?
+            Your Complete Journey
           </h2>
           <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Every great relationship starts with understanding. Let's help you and your dog 
-            discover what's possible when you both feel heard.
+            This isn't just dog training where you teach and they learn. This isn't just self-help where you change and hope they follow. This is complete relationship development where both of you grow into better partners.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-12">
+          <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto mb-12">
             <Card className="shadow-medium">
               <CardHeader>
-                <CardTitle className="text-xl text-forest-deep">Never Done This Before?</CardTitle>
+                <CardTitle className="text-xl text-forest-deep">Start Here</CardTitle>
                 <CardDescription>
-                  Try a guided walk to experience this approach with your dog firsthand
+                  Experience the foundation through Guided Decompression Walks
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <Link to="/guided-walks">
                   <Button variant="nature" className="w-full">
-                    Book Your First Walk
+                    Book Your First Experience
                   </Button>
                 </Link>
               </CardContent>
@@ -478,18 +556,36 @@ const Index = () => {
 
             <Card className="shadow-medium">
               <CardHeader>
-                <CardTitle className="text-xl text-forest-deep">Want to Know More?</CardTitle>
+                <CardTitle className="text-xl text-forest-deep">Go Deeper</CardTitle>
                 <CardDescription>
-                  Get in touch to learn how this might help you and your dog
+                  Master the complete system in Decompression Method Workshops
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <Button 
                   variant="soft" 
                   className="w-full"
-                  onClick={() => window.open('mailto:cherwood87@gmail.com?subject=Tell Me More', '_blank')}
+                  onClick={() => window.open('mailto:cherwood87@gmail.com?subject=Workshop Information', '_blank')}
                 >
-                  Ask Questions
+                  Learn About Workshops
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-medium">
+              <CardHeader>
+                <CardTitle className="text-xl text-forest-deep">Share It</CardTitle>
+                <CardDescription>
+                  Help other families through Professional Certification
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button 
+                  variant="soft" 
+                  className="w-full"
+                  onClick={() => window.open('mailto:cherwood87@gmail.com?subject=Certification Interest', '_blank')}
+                >
+                  Join Interest List
                 </Button>
               </CardContent>
             </Card>
@@ -497,9 +593,217 @@ const Index = () => {
         </div>
       </section>
 
-      <Footer />
+      {/* Footer */}
+      <footer className="bg-forest-deep text-white py-12 md:py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h3 className="text-2xl md:text-3xl font-bold mb-6">True Transformation Happens When Both Species Learn Together</h3>
+            
+            <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
+              Join the families who've discovered that the best relationships happen when dogs and handlers 
+              learn to regulate, communicate, and grow together.
+            </p>
+            
+            <Link to="/guided-walks">
+              <Button variant="hero-outline" size="lg" className="mb-12">
+                Start Your Journey Today
+              </Button>
+            </Link>
+            
+            <div className="border-t border-white/20 pt-8">
+              <div className="grid md:grid-cols-2 gap-8 text-center md:text-left">
+                {/* Street Wise Canine */}
+                <div>
+                  <h4 className="font-semibold text-lg mb-4">Street Wise Canine</h4>
+                  <div className="space-y-2">
+                    <a 
+                      href="https://streetwisecanine.ca" 
+                      className="block text-white/80 hover:text-white transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      streetwisecanine.ca
+                    </a>
+                  </div>
+                </div>
+                
+                {/* Pet Intel */}
+                <div>
+                  <h4 className="font-semibold text-lg mb-4">Pet Intel</h4>
+                  <div className="space-y-2">
+                    <a 
+                      href="https://petintel.ca" 
+                      className="block text-white/80 hover:text-white transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      petintel.ca
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="text-center mt-8 pt-8 border-t border-white/20 text-white/60 text-sm">
+                © {new Date().getFullYear()} The Decompression Method. All rights reserved.
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
 
-export default Index;
+export default Index; justify-center mb-4">
+                  <Heart className="w-8 h-8 text-forest-deep" />
+                </div>
+                <CardTitle className="text-xl text-forest-deep">For Dogs</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-forest-medium flex-shrink-0 mt-0.5" />
+                  <p className="text-sm text-muted-foreground">Decreased reactivity and anxiety in all situations</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-forest-medium flex-shrink-0 mt-0.5" />
+                  <p className="text-sm text-muted-foreground">Increased confidence and decision-making ability</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-forest-medium flex-shrink-0 mt-0.5" />
+                  <p className="text-sm text-muted-foreground">Better self-regulation during stress</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-forest-medium flex-shrink-0 mt-0.5" />
+                  <p className="text-sm text-muted-foreground">Stronger communication with humans</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-forest-medium flex-shrink-0 mt-0.5" />
+                  <p className="text-sm text-muted-foreground">Deeper trust in human partnership</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* For Handlers */}
+            <Card className="shadow-medium">
+              <CardHeader>
+                <div className="w-16 h-16 bg-forest-light rounded-full flex items-center justify-center mb-4">
+                  <Users className="w-8 h-8 text-forest-deep" />
+                </div>
+                <CardTitle className="text-xl text-forest-deep">For Handlers</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-forest-medium flex-shrink-0 mt-0.5" />
+                  <p className="text-sm text-muted-foreground">Stay calm under pressure in any situation</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-forest-medium flex-shrink-0 mt-0.5" />
+                  <p className="text-sm text-muted-foreground">Clear communication that prevents problems</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-forest-medium flex-shrink-0 mt-0.5" />
+                  <p className="text-sm text-muted-foreground">Confidence in reading and responding to your dog</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-forest-medium flex-shrink-0 mt-0.5" />
+                  <p className="text-sm text-muted-foreground">Tools for helping your dog anywhere</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-forest-medium flex-shrink-0 mt-0.5" />
+                  <p className="text-sm text-muted-foreground">Natural leadership that feels good to both of you</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* For Your Relationship */}
+            <Card className="shadow-medium">
+              <CardHeader>
+                <div className="w-16 h-16 bg-forest-light rounded-full flex items-center justify-center mb-4">
+                  <Target className="w-8 h-8 text-forest-deep" />
+                </div>
+                <CardTitle className="text-xl text-forest-deep">For Your Relationship</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-forest-medium flex-shrink-0 mt-0.5" />
+                  <p className="text-sm text-muted-foreground">Partnership instead of constant management</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-forest-medium flex-shrink-0 mt-0.5" />
+                  <p className="text-sm text-muted-foreground">Clear communication that reduces conflict</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-forest-medium flex-shrink-0 mt-0.5" />
+                  <p className="text-sm text-muted-foreground">Shared experiences that build connection</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-forest-medium flex-shrink-0 mt-0.5" />
+                  <p className="text-sm text-muted-foreground">Daily life that flows more smoothly</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-forest-medium flex-shrink-0 mt-0.5" />
+                  <p className="text-sm text-muted-foreground">Trust that supports all other training</p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Who This Complete System Helps */}
+      <section className="py-16 lg:py-20 bg-gradient-subtle">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-forest-deep">
+              Who This Complete System Helps
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Whether you're struggling with daily life or you're a professional looking for better approaches, 
+              this system meets you where you are and teaches essential life skills.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8">
+            <Card className="shadow-medium hover:shadow-strong transition-smooth">
+              <CardHeader>
+                <div className="w-16 h-16 bg-forest-light rounded-full flex items-center justify-center mb-4">
+                  <Users className="w-8 h-8 text-forest-deep" />
+                </div>
+                <CardTitle className="text-2xl text-forest-deep">Dog Families</CardTitle>
+                <CardDescription className="text-base">
+                  Transform daily life so everything becomes easier for both of you
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-0" />
+                    <span>Stop the pulling and reactivity without fighting</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-0" />
+                    <span>Learn to read what your dog is trying to tell you</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-0" />
+                    <span>Develop skills that work at home, vet visits, anywhere</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-0" />
+                    <span>Perfect for reactive, anxious, rescue, or high-energy dogs</span>
+                  </div>
+                </div>
+                
+                <div className="pt-4">
+                  <Link to="/guided-walks">
+                    <Button variant="soft" className="w-full">
+                      Start with Foundation Experience
+                    </Button>
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-medium hover:shadow-strong transition-smooth">
+              <CardHeader>
+                <div className="w-16 h-16 bg-forest-light rounded-full flex items-center
