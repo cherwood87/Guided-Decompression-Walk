@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { ArrowRight, MapPin, Clock, Users, Heart, Brain, Target, CheckCircle, BookOpen, Award, Compass } from 'lucide-react';
 import { ResponsiveImage } from '@/components/ResponsiveImage';
 import { Link } from 'react-router-dom';
+import { Navigation } from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import heroImage from '@/assets/IMG_5713.jpg';
 import walkImage1 from '@/assets/IMG_5736.jpeg';
@@ -14,30 +15,27 @@ const Index = () => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const navigationItems = [
+    {
+      label: 'LISTEN Method',
+      action: () => scrollToSection('method'),
+      type: 'scroll' as const
+    },
+    {
+      label: 'Programs',
+      action: () => scrollToSection('programs'),
+      type: 'scroll' as const
+    },
+    {
+      label: 'Guided Walks',
+      action: () => window.location.href = '/guided-walks',
+      type: 'link' as const
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
-      {/* Fixed Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <div className="font-bold text-forest-deep text-lg md:text-xl">The Decompression Method</div>
-          <div className="flex items-center gap-4">
-            <Link 
-              to="/guided-walks"
-              className="hidden md:inline-block text-forest-medium hover:text-forest-deep transition-colors"
-            >
-              Guided Walks
-            </Link>
-            <Button 
-              variant="hero" 
-              size="sm"
-              className="touch-target h-10 px-4 md:h-12 md:px-6"
-              onClick={() => window.open('mailto:cherwood87@gmail.com', '_blank')}
-            >
-              Contact
-            </Button>
-          </div>
-        </div>
-      </nav>
+      <Navigation items={navigationItems} />
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
@@ -139,7 +137,7 @@ const Index = () => {
       </section>
 
       {/* Programs Section */}
-      <section className="py-16 lg:py-20">
+      <section id="programs" className="py-16 lg:py-20">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-forest-deep">

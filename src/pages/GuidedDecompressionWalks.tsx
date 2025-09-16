@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { ArrowDown, MapPin, Clock, DollarSign, Users, Heart, Brain, Target, ChevronDown, CheckCircle, Play, TrendingUp, ExternalLink, Facebook, Instagram, Check, X, Star, Award, Shield } from 'lucide-react';
 import { ResponsiveImage } from '@/components/ResponsiveImage';
+import { Navigation } from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import heroImage from '@/assets/IMG_5728.jpeg';
 import walkImage1 from '@/assets/IMG_0484.jpeg';
@@ -16,30 +17,32 @@ const GuidedDecompressionWalks = () => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const navigationItems = [
+    {
+      label: 'Home',
+      action: () => window.location.href = '/',
+      type: 'link' as const
+    },
+    {
+      label: 'About',
+      action: () => scrollToSection('about'),
+      type: 'scroll' as const
+    },
+    {
+      label: 'FAQ',
+      action: () => scrollToSection('faq'),
+      type: 'scroll' as const
+    },
+    {
+      label: 'Pricing',
+      action: () => scrollToSection('pricing'),
+      type: 'scroll' as const
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
-      {/* Fixed Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <div className="font-bold text-forest-deep text-lg md:text-xl">The Decompression Method</div>
-          <div className="flex items-center gap-4">
-            <button 
-              onClick={() => scrollToSection('faq')}
-              className="hidden md:inline-block text-forest-medium hover:text-forest-deep transition-colors"
-            >
-              FAQ
-            </button>
-            <Button 
-              variant="hero" 
-              size="sm"
-              className="touch-target h-10 px-4 md:h-12 md:px-6"
-              onClick={() => window.open('mailto:cherwood87@gmail.com', '_blank')}
-            >
-              Contact
-            </Button>
-          </div>
-        </div>
-      </nav>
+      <Navigation items={navigationItems} />
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-end lg:items-start justify-center lg:justify-end overflow-hidden pt-16">
@@ -133,7 +136,7 @@ const GuidedDecompressionWalks = () => {
       </section>
 
       {/* How It's Different */}
-      <section className="py-16 lg:py-20">
+      <section id="about" className="py-16 lg:py-20">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-forest-deep">
@@ -641,7 +644,7 @@ const GuidedDecompressionWalks = () => {
       </section>
 
       {/* Pricing & Packages */}
-      <section className="py-16 lg:py-20 bg-gradient-subtle">
+      <section id="pricing" className="py-16 lg:py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-forest-deep">
