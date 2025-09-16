@@ -54,15 +54,15 @@ const Index = () => {
           </div>
           
           <h1 className="text-3xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
-            The Decompression Method™
+            The Decompression Method
           </h1>
           
           <h2 className="text-xl lg:text-2xl xl:text-3xl font-light mb-8 text-white/90 max-w-3xl mx-auto">
-            Where dogs and handlers learn to regulate together
+            Less pressure. More partnership.
           </h2>
           
           <p className="text-lg lg:text-xl mb-10 leading-relaxed text-white/90 max-w-2xl mx-auto">
-            A revolutionary approach that prioritizes nervous system regulation, choice-making, and natural behaviors to build stronger relationships between dogs and their handlers.
+            An approach that helps dogs feel safe, supported, and seen while helping handlers finally understand what their dogs truly need.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
@@ -88,12 +88,10 @@ const Index = () => {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-forest-deep">
-              A Science-Based Approach to Connection
+              Honoring Nature, Building Trust
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              The Decompression Method™ is grounded in affective neuroscience and nervous system regulation principles. 
-              Unlike traditional training that focuses on control and compliance, our approach prioritizes co-regulation, 
-              choice-making, and the natural emotional systems that drive behavior.
+              The Decompression Method™ puts connection first. By focusing on calm, choice, and natural behaviors, we help dogs and handlers move together in balance, not opposition.
             </p>
           </div>
 
