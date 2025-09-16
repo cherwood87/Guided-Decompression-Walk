@@ -311,11 +311,11 @@ const Index = () => {
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-0" />
-                    <span>Tools for dogs others have given up on</span>
+                    <span>Methods that reduce stress and build confidence</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-forest-medium mt-0.5 flex-shrink-0" />
-                    <span>Certification training starting 2025</span>
+                    <span>Professional certification coming soon</span>
                   </div>
                 </div>
                 
