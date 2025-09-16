@@ -5,7 +5,7 @@ import { ArrowRight, MapPin, Clock, Users, Heart, Brain, Target, CheckCircle, Bo
 import { ResponsiveImage } from '@/components/ResponsiveImage';
 import { Link } from 'react-router-dom';
 import heroImage from '@/assets/IMG_5713.jpg';
-import walkImage1 from '@/assets/IMG_0484.jpeg';
+import walkImage1 from '@/assets/IMG_5736.jpeg';
 import walkImage2 from '@/assets/IMG_5703.jpeg';
 
 const Index = () => {
