@@ -3,16 +3,13 @@ import { Footer } from '@/components/layout/Footer';
 import { StickyButton } from '@/components/layout/StickyButton';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { SuccessStatsSection } from '@/components/sections/SuccessStatsSection';
+import { MethodOverviewSection } from '@/components/sections/MethodOverviewSection';
 import { HowItsDifferentSection } from '@/components/sections/HowItsDifferentSection';
-import { PerfectForSection } from '@/components/sections/PerfectForSection';
-import { PropertyTourSection } from '@/components/sections/PropertyTourSection';
-import { DualBenefitsSection } from '@/components/sections/DualBenefitsSection';
-import { ExperienceSection } from '@/components/sections/ExperienceSection';
-import { FAQSection } from '@/components/sections/FAQSection';
+import { ProgramsSection } from '@/components/sections/ProgramsSection';
+import { ListenMethodSection } from '@/components/sections/ListenMethodSection';
 import { WhyItWorksSection } from '@/components/sections/WhyItWorksSection';
-import { PricingLocationSection } from '@/components/sections/PricingLocationSection';
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
-import { FinalCTASection } from '@/components/sections/FinalCTASection';
+import { FAQSection } from '@/components/sections/FAQSection';
 
 const Index = () => {
   return (
@@ -21,16 +18,13 @@ const Index = () => {
       
       <HeroSection />
       <SuccessStatsSection />
+      <MethodOverviewSection />
       <HowItsDifferentSection />
-      <PerfectForSection />
-      <PropertyTourSection />
-      <DualBenefitsSection />
-      <ExperienceSection />
-      <FAQSection />
+      <ProgramsSection />
+      <ListenMethodSection />
       <WhyItWorksSection />
-      <PricingLocationSection />
       <TestimonialsSection />
-      <FinalCTASection />
+      <FAQSection />
       
       <Footer />
       <StickyButton />
