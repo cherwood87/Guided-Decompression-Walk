@@ -163,7 +163,7 @@ const Index = () => {
                     </div>
                     <Badge variant="secondary" className="bg-forest-medium text-white">Available Now</Badge>
                   </div>
-                  <CardTitle className="text-2xl text-forest-deep">Guided Decompression Walks™</CardTitle>
+                  <CardTitle className="text-2xl text-forest-deep">Guided Decompression Walks</CardTitle>
                   <CardDescription className="text-base">
                     See what happens when your dog gets to be a dog
                   </CardDescription>
@@ -531,7 +531,7 @@ const Index = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      streetwisecanine.ca
+                      streetsmartcanine.ca
                     </a>
                   </div>
                 </div>
