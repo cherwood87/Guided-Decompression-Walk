@@ -54,6 +54,15 @@ export function Navigation({ items }: NavigationProps) {
       {isOpen && (
         <div className="bg-background/98 backdrop-blur-sm border-b border-border shadow-lg">
           <div className="container mx-auto px-4 py-4 space-y-4">
+            <button
+              onClick={() => {
+                window.location.href = '/about';
+                closeMenu();
+              }}
+              className="block w-full text-left py-3 px-4 text-forest-medium hover:text-forest-deep hover:bg-forest-light/10 rounded-lg transition-all"
+            >
+              About
+            </button>
             {items.slice(0, -1).map((item, index) => (
               <button
                 key={index}
