@@ -41,7 +41,7 @@ const About = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-forest-deep">
-              🌿 Why the Decompression Method Unites Us 🌿
+              Why the Decompression Method Unites Us �
             </h2>
           </div>
 
