@@ -41,7 +41,7 @@ const About = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-forest-deep">
-              Why the Decompression Method Unites Us �
+              Why the Decompression Method Unites Us
             </h2>
           </div>
 
@@ -83,7 +83,7 @@ const About = () => {
             </p>
 
             <p className="text-lg leading-relaxed font-medium text-forest-deep">
-              Decompression isn't about taking sides. It's about creating unity in our profession, and peace for the dogs we serve. 🐾
+              Decompression isn't about taking sides. It's about creating unity in our profession, and peace for the dogs we serve.
             </p>
           </div>
         </div>
@@ -120,7 +120,7 @@ const About = () => {
             </p>
 
             <p className="text-lg leading-relaxed font-medium text-forest-deep">
-              Now, as colleagues and best friends, Jessica and Cher are proving that collaboration doesn't mean agreeing on everything—it means showing up with respect, curiosity, and a shared promise to put dogs first, always. 🐾💚
+              Now, as colleagues and best friends, Jessica and Cher are proving that collaboration doesn't mean agreeing on everything—it means showing up with respect, curiosity, and a shared promise to put dogs first, always.
             </p>
           </div>
         </div>
@@ -148,7 +148,7 @@ const About = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  Jessica Eden O'Neill is a nationally recognized canine behaviour specialist, educator, and entrepreneur based in Ottawa, Ontario. She is the owner of Pet Intel. Behaviour Centre and JWalker Dog Products, where she has developed innovative programs and humane training tools that serve both dog guardians and professionals across North America.
+                  Jessica Eden O'Neill is a nationally recognized canine behaviour specialist, educator, and entrepreneur based in Ottawa, Ontario. She is the owner of <a href="https://petintel.ca" target="_blank" rel="noopener noreferrer" className="text-forest-medium hover:text-forest-deep underline">Pet Intel. Behaviour Centre</a> and JWalker Dog Products, where she has developed innovative programs and humane training tools that serve both dog guardians and professionals across North America.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   Jessica's professional journey spans more than 20 years. She apprenticed under internationally respected behaviour specialists, completed intensive academic study, and earned her Diploma in Canine Behaviour Science & Technology from the Companion Animal Science Institute. She is an Accredited Dog Trainer (IAABC-ADT) with the International Association of Animal Behavior Consultants, and she is also the Chair of the Professional Standards & National Curriculum Committee (PSNC) of the Canadian Association of Professional Dog Trainers (CAPDT). In that role, she is leading the development of a national curriculum and registration process that will advance the professional standards of dog training across Canada.
@@ -171,7 +171,7 @@ const About = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  Cher Wood is the founder and head trainer of Street Wise Canine, bringing over 17 years of professional dog training experience to her community. Her lifelong work with dogs began in childhood, growing up immersed in dog breeding and showing. By her early teens, she was handling Scottish Terriers in the show ring and later gained further expertise as a groomer, building a strong foundation in canine communication, body language, and handling.
+                  Cher Wood is the founder and head trainer of <a href="https://streetsmartcanine.com" target="_blank" rel="noopener noreferrer" className="text-forest-medium hover:text-forest-deep underline">Street Wise Canine</a>, bringing over 17 years of professional dog training experience to her community. Her lifelong work with dogs began in childhood, growing up immersed in dog breeding and showing. By her early teens, she was handling Scottish Terriers in the show ring and later gained further expertise as a groomer, building a strong foundation in canine communication, body language, and handling.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   Since establishing her own training practice, Cher has worked with countless families and dogs, focusing on building confidence, resilience, and fulfillment through practical, enrichment-first approaches. She identifies as a "balanced" trainer, following the philosophy of LIMA (Least Intrusive, Minimally Aversive), while always emphasizing respect for the individual dog and clear communication for both ends of the leash.
